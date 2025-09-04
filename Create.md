@@ -1,1 +1,1 @@
-This monthly call aims to onboard new tasks from SMEs to EPAM support, reducing repetitive work and identifying areas where we can add value. SMEs can share updates on CD tools, and we’ll assess opportunities to assist within our expertise. The SME assigned and topics will be available in the tracker for reference.
+Ken will update us on his plan to complete this task in the coming month. We will begin with reverse shadowing, followed by executing the task in shadow mode. Moving forward, we will take full ownership of it.
