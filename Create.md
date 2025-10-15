@@ -1,4 +1,6 @@
-Today, we conducted our first monthly call to review and gain an understanding of the Twistlock documentation. A big thank-you to Ken for providing a comprehensive overview of the document.
+We couldn’t find anyone named Dean Richardson in SNOW under the Unified Endpoint Management team. Could you please provide an alternative contact?
 
-Next Steps:
-Ken will notify us about the upcoming Twistlock tasks. We will begin with reverse shadowing, followed by performing the activity in shadow mode, and then eventually take full ownership of this task.
+Also, could you confirm the following details for us?
+
+The engineer will be available according to the change schedule.
+The engineer has the necessary access to the host to perform a restart after our changes.
