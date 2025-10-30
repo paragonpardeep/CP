@@ -1,6 +1,1 @@
-SNOW - Incident query, update, creation, RCA summaries
-jira - Issue management, sprint summary, bug creation
-Confluence - Search articles, summarize, create/update docs
-Sharepoint - Search or fetch documents, summarize, retrieve policies
-Github - Fetch commits, PR summaries, Wiki search, link code-to-issue
-
+Thanks, Stephen, for your help with this change. After a month of sorting details and chasing approvals, we couldn’t have done it without your support. Really appreciate it!
