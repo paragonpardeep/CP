@@ -1,1 +1,6 @@
-Just a quick reminder—please don’t close tickets right away. Make sure to get confirmation from the user that everything has been validated and is working as expected before marking the ticket as resolved.
+SNOW - Incident query, update, creation, RCA summaries
+jira - Issue management, sprint summary, bug creation
+Confluence - Search articles, summarize, create/update docs
+Sharepoint - Search or fetch documents, summarize, retrieve policies
+Github - Fetch commits, PR summaries, Wiki search, link code-to-issue
+
