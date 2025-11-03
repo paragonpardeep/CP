@@ -1,17 +1,16 @@
-🔍 Problem Statement
+💡 Proposed Solution
 
-Today, support and SRE teams spend significant time:
+Develop an AI-powered virtual assistant within ELITEA that can:
 
-Searching across multiple tools for known issues, runbooks, or troubleshooting steps.
+Connect to multiple data sources (ServiceNow, Jira, Confluence, SharePoint, GitHub).
 
-Copying links, notes, and commands between platforms manually.
+Understand context (incident ID, issue type, priority, etc.)
 
-Losing time during incidents due to lack of centralized knowledge retrieval.
+Fetch, summarize, and recommend relevant solutions or KB articles instantly.
 
-This leads to:
+Assist in ticket updates, comments, and status changes directly via ELITEA.
 
-Increased MTTR (Mean Time To Resolution)
+Enable natural language queries, e.g.
 
-High context switching, reducing focus and productivity
-
-Inconsistent knowledge sharing across teams
+“Show me similar incidents in the last 3 months for this error code.”
+“Fetch runbook for database connection timeout.”
