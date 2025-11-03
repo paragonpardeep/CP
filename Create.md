@@ -1,4 +1,17 @@
-🧠 Idea Overview (How to Pitch It)
+🔍 Problem Statement
 
-Title: “Unified AI Assistant for Faster Incident Resolution”
-Goal: To build an AI assistant within ELITEA that connects with enterprise tools (ServiceNow, Jira, Confluence, SharePoint, GitHub) and enables engineers to quickly find, summarize, and share relevant information for resolving tickets — all through a single conversational interface.
+Today, support and SRE teams spend significant time:
+
+Searching across multiple tools for known issues, runbooks, or troubleshooting steps.
+
+Copying links, notes, and commands between platforms manually.
+
+Losing time during incidents due to lack of centralized knowledge retrieval.
+
+This leads to:
+
+Increased MTTR (Mean Time To Resolution)
+
+High context switching, reducing focus and productivity
+
+Inconsistent knowledge sharing across teams
