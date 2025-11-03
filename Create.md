@@ -1,9 +1,4 @@
-What is the primary business goal of this AI assistant — productivity improvement, ticket automation, or unified knowledge access?
+🧠 Idea Overview (How to Pitch It)
 
-Which tools and use cases should we prioritize in the first phase — ServiceNow, Jira, or knowledge platforms (Confluence, SharePoint)?
-
-Are there any data privacy or security restrictions on connecting external AI models to our internal systems?
-
-Who will own and maintain the integrations and API access for each platform?
-
-What success metrics should define the project’s impact — e.g., time saved, MTTR reduction, or incident accuracy?
+Title: “Unified AI Assistant for Faster Incident Resolution”
+Goal: To build an AI assistant within ELITEA that connects with enterprise tools (ServiceNow, Jira, Confluence, SharePoint, GitHub) and enables engineers to quickly find, summarize, and share relevant information for resolving tickets — all through a single conversational interface.
