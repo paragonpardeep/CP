@@ -1,3 +1,1 @@
-Integrate Generative RCA Creation using incident patterns.
-
-Enable Proactive Alerts — assistant can suggest preventive actions based on recurring issues.
+About the email—I've noticed that Abhijeet has already set up the temporary AD group to give users access to Dynatrace logs. I also see that people are adding their names and training completion status in the sheet. From our side, I believe we now need to create requests through Apex for all users who have completed the training. Please let me know if I’ve got that right or if there’s anything I’m missing.
