@@ -1,1 +1,10 @@
-About the email—I've noticed that Abhijeet has already set up the temporary AD group to give users access to Dynatrace logs. I also see that people are adding their names and training completion status in the sheet. From our side, I believe we now need to create requests through Apex for all users who have completed the training. Please let me know if I’ve got that right or if there’s anything I’m missing.
+Description:
+Develop an SSL Dashboard on Dynatrace.
+
+The initial implementation should be tested on the CD-TOOLS environment.
+After successful testing, assess the feasibility of rolling out the dashboard for General Availability (GA).
+Acceptance Criteria:
+
+SSL Dashboard is created and functional in the CD-TOOLS environment.
+Feasibility assessment for GA is completed and documented.
+Any issues or blockers are identified and shared with the team.
