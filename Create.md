@@ -1,10 +1,12 @@
-Description:
-Develop an SSL Dashboard on Dynatrace.
+ Build Unified Monitoring Dashboard on Dynatrace
 
-The initial implementation should be tested on the CD-TOOLS environment.
-After successful testing, assess the feasibility of rolling out the dashboard for General Availability (GA).
+Description:
+Create a unified dashboard on Dynatrace that aggregates key monitoring information from Splunk, Grafana, and Dynatrace.
+
+The dashboard should provide a consolidated view of all critical metrics and statuses to monitor the health and status of these tools.
 Acceptance Criteria:
 
-SSL Dashboard is created and functional in the CD-TOOLS environment.
-Feasibility assessment for GA is completed and documented.
-Any issues or blockers are identified and shared with the team.
+Unified dashboard is set up on Dynatrace.
+Data from Splunk, Grafana, and Dynatrace is integrated and displayed.
+The dashboard highlights important metrics and tool statuses for effective monitoring.
+Documentation is provided for dashboard usage and maintenance.
