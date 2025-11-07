@@ -1,3 +1,1 @@
-fetch metrics
-| filter metric == "builtin:host.uptime"
-| filter dt.entity.host == "HOST-XXXX"
+Sorry I didn’t leave a comment on the ticket earlier. I’ve already rescheduled our call for next week, on November 13th, since Sai is out today and not feeling well. Let me know if that new date works for you!
