@@ -1,1 +1,1 @@
-Sorry I didn’t leave a comment on the ticket earlier. I’ve already rescheduled our call for next week, on November 13th, since Sai is out today and not feeling well. Let me know if that new date works for you!
+Could you please raise a change request for this update? Also, can you create a CTASK for CD-TOOLS to remove the host from monitoring in Dynatrace? Since this involves the production Dynatrace environment, we’ll need to follow the change management process
