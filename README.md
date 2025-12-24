@@ -1,2 +1,1 @@
-Please do not click or make any changes using options like “Migrate openpipeline” in PROD or NON-PROD, as this can break existing monitoring.
-For any change requests in PROD outside of daily routine tasks, please inform me in advance.
+Thank you so much for your kind words—I truly appreciate it. Your support and trust mean a lot to me, and it’s been motivating to see the team grow in ownership and follow-up throughout the year. I’m grateful for the guidance and opportunities you provide. Wishing you and your family a very happy and successful New Year as well
