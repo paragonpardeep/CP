@@ -1,3 +1,3 @@
 index=k8s_logs
 kubernetes_container_name="fad-forward-sync-consumer"
-crbt_id=325989
+| stats count by kubernetes_pod_name
