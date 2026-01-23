@@ -10,3 +10,28 @@ Nagaraju and I had a call with Ken today. Below are the MOM (Minutes of Meeting)
 Ken shared complete details on how we should handle this type of request. Thanks to Ken for clearly explaining the approach.
 
 Currently, there is no defined process or documentation. Ken mentioned that he will prepare and share the documentation soon. We will follow the same for this case and for future requests.”
+
+
+--------------
+
+
+Title:
+Implement Host Monitoring Automation Using Terraform
+
+Description:
+We have developed automation code in Terraform to enable host monitoring across multiple hosts. This solution addresses the requirements raised in the user ticket and is documented in the project wiki. The automation ensures consistent monitoring setup and reduces manual intervention.
+
+Acceptance Criteria:
+
+Terraform code is deployed and successfully configures monitoring for all specified hosts.
+Monitoring setup is verified for each host.
+Documentation is updated in the wiki, including setup steps and troubleshooting guidelines.
+All requirements from the user ticket are addressed.
+References:
+
+[Link to Wiki Documentation]
+[Link to User Ticket]
+Notes:
+
+Multiple hosts are included in the scope as per the user request.
+Please refer to the wiki for detailed implementation steps and host list.
