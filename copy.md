@@ -1,17 +1,14 @@
-OpsAssist – Current Status​
-
-​
-
-Completed:​
-
-Successfully obtained access to the Dev environments for Confluence, Jira, and GitHub.​
-
-Completed integration of Confluence, Jira with Elita.​
-
-We are doing the testing on version 1, soon we will close once we have the SNOW access.​
-
-In Progress:​
-
-Engaged with the ServiceNow team regarding access to the ServiceNow Dev URL and submitted the required access request.​
-
-The request is scheduled for discussion in the upcoming DRB meeting on 9 July. Further updates will be provided following the outcome of the discussion.
+Activity	Avg. Time Saved per Task	No. of Tasks (Quarter)	Hours Saved
+Runbook / SOP creation	1.5 hrs	20	30 hrs
+RCA preparation	1 hr	30	30 hrs
+PR reviews using GitHub Copilot	20 mins (0.33 hr)	150	50 hrs
+Terraform / Script development	1 hr	25	25 hrs
+Documentation (HLD, LLD, KT, Wiki)	1 hr	40	40 hrs
+Knowledge search / troubleshooting	30 mins (0.5 hr)	50	25 hrs
+Total Hours Saved
+ 
+ 
+ 
+Metric	Value
+Total Engineering Hours Saved	
+200+ Hours
