@@ -1,14 +1,4 @@
-Activity	Avg. Time Saved per Task	No. of Tasks (Quarter)	Hours Saved
-Runbook / SOP creation	1.5 hrs	20	30 hrs
-RCA preparation	1 hr	30	30 hrs
-PR reviews using GitHub Copilot	20 mins (0.33 hr)	150	50 hrs
-Terraform / Script development	1 hr	25	25 hrs
-Documentation (HLD, LLD, KT, Wiki)	1 hr	40	40 hrs
-Knowledge search / troubleshooting	30 mins (0.5 hr)	50	25 hrs
-Total Hours Saved
- 
- 
- 
-Metric	Value
-Total Engineering Hours Saved	
-200+ Hours
+Phase 1 - Completed — the AI Knowledge Assistant capability is achievable with the current Jira, Confluence, and GitHub integrations, except SNOW.
+The solution can already leverage these knowledge sources to provide contextual RCA, probable fixes, and troubleshooting recommendations.
+ServiceNow integration is the key pending dependency — currently waiting for SNOW access / DRB approval to complete the next stage.
+Once SNOW access is available, the focus will be completely on rolling out the Phase 2. 
