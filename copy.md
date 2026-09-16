@@ -1,4 +1,11 @@
-Phase 1 - Completed — the AI Knowledge Assistant capability is achievable with the current Jira, Confluence, and GitHub integrations, except SNOW.
-The solution can already leverage these knowledge sources to provide contextual RCA, probable fixes, and troubleshooting recommendations.
-ServiceNow integration is the key pending dependency — currently waiting for SNOW access / DRB approval to complete the next stage.
-Once SNOW access is available, the focus will be completely on rolling out the Phase 2. 
+The agent should help with:
+Analyze incident/ticket descriptions.
+Identify incident patterns and recurring issues.
+Categorize/type incidents.
+Identify incidents that cannot be permanently reduced.
+Support analysis of incidents where permanent fixes are not feasible.
+Provide insights that can help teams decide between:
+Permanent fix
+Auto-resolution/automation
+Operational/process improvement
+Accepting the incident as non-reducible
