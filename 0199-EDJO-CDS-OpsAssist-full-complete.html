@@ -1,0 +1,2203 @@
+<!doctype html>
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html data-handout-version="4.7" data-template-version="1" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ai-run-milestone-submission/1" name="generator"/>
+<meta content="4.7" name="handout-version"/>
+<title>Team name · AI/Run Mission 2026 · Milestone 1</title>
+<style>:root{
+  --grid-unit: 4px;
+  --font-xs: 0.75rem;
+  --font-sm: 0.8125rem;
+  --font-base: 0.9375rem;
+  --font-md: 1.0625rem;
+  --font-lg: 1.25rem;
+  --font-2xl: 1.875rem;
+  --font-family: 'museo-sans', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --leading-none: 1;
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+  --radius: 8px;
+  --space-1: calc(var(--grid-unit) * 1);
+  --space-2: calc(var(--grid-unit) * 2);
+  --space-3: calc(var(--grid-unit) * 3);
+  --space-4: calc(var(--grid-unit) * 4);
+  --space-5: calc(var(--grid-unit) * 5);
+  --space-6: calc(var(--grid-unit) * 6);
+  --space-8: calc(var(--grid-unit) * 8);
+  --space-12: calc(var(--grid-unit) * 12);
+  --space-16: calc(var(--grid-unit) * 16);
+  /* The drawer's width, and the sideways room the paper is allowed to give it. The shift is half
+   * the drawer, so what is left of the viewport is still centred - never more than the free margin
+   * the page already had, so nothing is ever pushed off the left edge. */
+  --qpanel-w: 24rem;
+  --page-w: 68rem;
+  --qshift: 0px;
+  --qshift-bar: 0px;
+  --brand-200: #ffb13b;
+  --brand-400: #ff6b1a;
+  --brand-700: #a94712;
+  --neutral-0: #ffffff;
+  --neutral-100: #f1f6fd;
+  --neutral-200: #ebf0f7;
+  --neutral-400: #bbbfc6;
+  --neutral-700: #5f6369;
+  --neutral-800: #3b3f45;
+  --neutral-820: #2c3036;
+  --neutral-900: #1f2328;
+  --success-50: #e6f6eb;
+  --success-200: #9ddbaf;
+  --success-900: #006529;
+  --warning-100: #fffac8;
+  --warning-200: #fff6a3;
+  --warning-930: #6b4915;
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.10);
+  --radius-lg: calc(var(--radius) + var(--grid-unit));
+  --radius-full: 9999px;
+  --foreground: var(--neutral-900);
+  --card: var(--neutral-0);
+  --muted: var(--neutral-100);
+  --muted-foreground: var(--neutral-700);
+  --primary: var(--brand-400);
+  --primary-foreground: var(--neutral-0);
+  --link: var(--primary-accent);
+  --primary-accent: var(--brand-400);
+  --primary-soft-foreground: var(--brand-700);
+  --accent: var(--neutral-200);
+  --success-soft: var(--success-50);
+  --success-soft-foreground: var(--success-900);
+  --warning-soft: var(--warning-100);
+  --warning-soft-foreground: var(--neutral-900);
+  --border: var(--neutral-200);
+  --brand-mark: var(--brand-400);
+  --edit-wash: rgb(255 107 26 / .07);
+  --edit-wash-hover: rgb(255 107 26 / .15);
+}
+:root[data-theme="dark"]{
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.40);
+  --foreground: var(--neutral-100);
+  --card: var(--neutral-900);
+  --muted: var(--neutral-820);
+  --muted-foreground: var(--neutral-400);
+  --primary: var(--brand-400);
+  --primary-foreground: var(--neutral-0);
+  --primary-accent: var(--brand-400);
+  --primary-soft-foreground: var(--brand-200);
+  --accent: var(--neutral-800);
+  --success-soft: var(--success-900);
+  --success-soft-foreground: var(--success-200);
+  --warning-soft: var(--warning-930);
+  --warning-soft-foreground: var(--warning-200);
+  --border: var(--neutral-800);
+  --edit-wash: rgb(255 107 26 / .13);
+  --edit-wash-hover: rgb(255 107 26 / .24);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.40);
+  --foreground: var(--neutral-100);
+  --card: var(--neutral-900);
+  --muted: var(--neutral-820);
+  --muted-foreground: var(--neutral-400);
+  --primary: var(--brand-400);
+  --primary-foreground: var(--neutral-0);
+  --primary-accent: var(--brand-400);
+  --primary-soft-foreground: var(--brand-200);
+  --accent: var(--neutral-800);
+  --success-soft: var(--success-900);
+  --success-soft-foreground: var(--success-200);
+  --warning-soft: var(--warning-930);
+  --warning-soft-foreground: var(--warning-200);
+  --border: var(--neutral-800);
+}}</style>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{color-scheme:light dark}
+body{margin:0;background:var(--muted);color:var(--foreground);
+  font-family:var(--font-family);font-size:var(--font-base);line-height:var(--leading-normal);
+  -webkit-font-smoothing:antialiased}
+h1,h2,h3,p,dl,dd,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+p{text-wrap:pretty}
+/* The arrangement the cockpit itself uses: a grey ground, and everything that holds content is a
+ * white card on it. What was wrong before was not the card, it was the page-sized SHEET - one white
+ * rectangle holding every other one, with a rule across the top, which is three decorations doing
+ * the work of a margin. */
+.page{max-width:var(--page-w);margin:0 auto;padding:var(--space-12) var(--space-6) var(--space-16);
+  transform:translateX(calc(-1 * var(--qshift)));transition:transform .18s ease}
+.icon{width:1em;height:1em;flex:none}
+.icon--xs{width:.85em;height:.85em}
+
+/* ── Header ─────────────────────────────────────────────────────────────────────────── */
+.head{padding-bottom:var(--space-6)}
+.head-top{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
+/* THE LOGOTYPE IS THE WORDMARK, ALONE. There is no disc beside it any more (owner, 31.08:
+ * "убери тут кружок с черточкой и оставь только логотип правый").
+ *
+ * The disc was a second drawing of a name the wordmark already spells, and two objects that mean
+ * the same thing have to be kept in step forever - same ink, same height, same optical centre -
+ * for no gain. One object cannot fall out of alignment with itself.
+ *
+ * The ink is --brand-mark, the one token the whole programme draws its logotype with. It is the
+ * accent EXACTLY, #ff6b1a, in both themes and on any surface, because a logo that changes colour
+ * with the theme is two logos. Naming the role rather than the ramp stop is what stops this page
+ * and the cockpit that generates it from ending up on two different oranges (owner, 30.08: why are
+ * the colours different). */
+.brand{display:flex;margin:0;color:var(--brand-mark)}
+/* Sized by HEIGHT, because a wordmark's width is whatever its letters need, and the mark is two
+ * stacked lines rather than one. */
+.brand-word{display:block;height:var(--space-12);width:auto;color:currentColor}
+.theme{display:grid;place-items:center;width:var(--space-8);height:var(--space-8);
+  border:0;border-radius:var(--radius-full);background:var(--card);
+  color:var(--muted-foreground);
+  cursor:pointer;font-size:var(--font-base)}
+.theme:hover{color:var(--foreground)}
+.theme-moon{display:none}
+:root[data-theme="dark"] .theme-sun{display:none}
+:root[data-theme="dark"] .theme-moon{display:block}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .theme-sun{display:none}
+  :root:not([data-theme="light"]) .theme-moon{display:block}
+}
+.team{margin-top:var(--space-4);font-size:var(--font-2xl);font-weight:700;
+  line-height:var(--leading-tight);letter-spacing:-.01em}
+.team-code{margin-top:var(--space-1);font-size:var(--font-xs);letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted-foreground)}
+.tagline{margin-top:var(--space-3);font-size:var(--font-md);color:var(--muted-foreground);max-width:52rem}
+/* WHO THIS IS, in one card: the facts, the people, and how much of the page is evidenced. Three
+ * things a reader takes in before reading anything, and they were three separate strips of
+ * different weights, none of which looked like it belonged to the others. */
+.identity{margin-top:var(--space-6);display:flex;flex-direction:column;gap:var(--space-5);
+  padding:var(--space-5) var(--space-6)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:var(--space-5)}
+.fact+.fact{padding-left:var(--space-5)}
+.fact dt{font-size:var(--font-xs);text-transform:uppercase;letter-spacing:.06em;
+  color:var(--muted-foreground)}
+.fact dd{margin:var(--space-2) 0 0;font-weight:var(--font-weight-semibold);
+  line-height:var(--leading-snug)}
+.fact--wide{padding:0;max-width:52rem}
+
+.people-strip{display:flex;flex-wrap:wrap;gap:var(--space-3);padding-top:var(--space-2)}
+.person{display:flex;flex-direction:column;line-height:var(--leading-snug);background:var(--muted);
+  border-radius:var(--radius-lg);padding:var(--space-2) var(--space-4)}
+.person-name{font-size:var(--font-sm);font-weight:var(--font-weight-semibold)}
+.person-role{font-size:var(--font-xs);color:var(--muted-foreground)}
+
+/* The bar is the card's full width and stands ABOVE its sentence. At 8rem beside the text it was a
+ * stub against a paragraph that wrapped to two lines, and nothing in the block lined up with
+ * anything else in the card (owner, 30.08). Full width it reads as a rule closing the identity
+ * card, and the sentence starts on the same left edge as every other line on the page. */
+.readiness{display:flex;flex-direction:column;gap:var(--space-3);padding-top:var(--space-2)}
+.readiness-bar{width:100%;height:6px;border-radius:var(--radius-full);
+  background:var(--muted);overflow:hidden}
+.readiness-bar span{display:block;height:100%;background:var(--primary);border-radius:inherit}
+.readiness-text{font-size:var(--font-sm);color:var(--muted-foreground)}
+.readiness-text strong{color:var(--foreground)}
+
+/* ── Sections and cards ─────────────────────────────────────────────────────────────── */
+.section{margin-top:var(--space-8)}
+/* A heading, not a caption. It was 12px uppercase grey, which is the size of a form label: on a
+ * document that is read in one pass the section names are the map, and a map has to be legible
+ * from the top of the page. */
+.section-title{display:flex;align-items:center;gap:var(--space-3);font-size:var(--font-lg);
+  font-weight:var(--font-weight-semibold);letter-spacing:-.01em;color:var(--foreground);
+  margin-bottom:var(--space-4)}
+.section-icon{flex:none;width:1.1em;height:1.1em;color:var(--primary-accent)}
+.card{background:var(--card);border-radius:var(--radius-lg);padding:var(--space-5)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);align-items:stretch}
+.field-stack{display:flex;flex-direction:column;gap:var(--space-5)}
+.field-label{font-size:var(--font-xs);text-transform:uppercase;letter-spacing:.06em;
+  color:var(--muted-foreground);margin-bottom:var(--space-2)}
+.field-text{font-size:var(--font-sm);line-height:var(--leading-relaxed)}
+.field-text--empty{color:var(--muted-foreground)}
+/* EVERY SMALL LABEL ON THIS PAGE IS A PILL, and that is one decision rather than five.
+ * At 20px tall an 8px corner is barely a corner, so the tags, the chips and the level
+ * labels each read as a slightly-softened rectangle - and each sat next to something genuinely
+ * round (the icon holder, the readiness bar), which made the near-square look unfinished rather
+ * than deliberate. A pill has no ambiguous radius to get wrong at any size, and the extra inline
+ * padding is what keeps the text off the curve. */
+.chip-row{display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.tag{font-size:var(--font-xs);color:var(--muted-foreground);background:var(--muted);
+  border-radius:var(--radius-full);padding:var(--space-1) var(--space-3)}
+.tag--empty{background:transparent;padding-inline:0}
+
+.card--north{padding:var(--space-6)}
+.north-goal{font-size:var(--font-md);line-height:var(--leading-relaxed);max-width:60rem}
+/* The score, the sentence and the scale — the cockpit's own reading of a maturity level, because
+ * the reader of this page and the reader of that screen are the same coach. */
+.levels{margin-top:var(--space-5)}
+.level-score{margin-top:var(--space-2);font-size:var(--font-2xl);font-weight:700;
+  line-height:var(--leading-none);letter-spacing:-.02em;color:var(--primary-accent)}
+.level-of{font-size:var(--font-lg);font-weight:var(--font-weight-semibold);color:var(--muted-foreground)}
+.level-legend{margin-top:var(--space-2);font-size:var(--font-sm);color:var(--muted-foreground)}
+/* The design system's meter, copied by hand because this page carries no stylesheet but its own:
+ * a 6px rule, the goal as a hairline ringed in the surface colour, the scale named underneath. */
+.meter{margin-top:var(--space-3)}
+.meter-track{position:relative;height:6px;border-radius:var(--radius-full);background:var(--muted)}
+.meter-fill{position:absolute;top:0;bottom:0;left:0;border-radius:var(--radius-full);background:var(--primary)}
+.meter-target{position:absolute;top:-3px;bottom:-3px;width:2px;border-radius:var(--radius-full);
+  background:var(--foreground);box-shadow:0 0 0 2px var(--card)}
+.meter-ticks{display:flex;justify-content:space-between;margin-top:var(--space-1);
+  font-size:var(--font-xs);color:var(--muted-foreground);font-variant-numeric:tabular-nums}
+.shift{margin-top:var(--space-5);display:grid;grid-template-columns:1fr auto 1fr;
+  gap:var(--space-4);align-items:stretch}
+.shift-side{background:var(--muted);border-radius:var(--radius);padding:var(--space-4);
+  font-size:var(--font-sm);color:var(--muted-foreground)}
+/* Where the team is going, marked on the page's own surface, with the accent as a line rather
+ * than a wash. */
+.shift-side--to{background:var(--card);color:var(--primary-soft-foreground);
+  border:2px solid var(--primary-accent);padding:calc(var(--space-4) - 2px)}
+.shift-arrow{display:flex;align-items:center;color:var(--primary-accent);font-size:var(--font-lg)}
+.north-foot{margin-top:var(--space-5);padding-top:var(--space-2);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:var(--space-5)}
+
+/* ── Stage cards ────────────────────────────────────────────────────────────────────────
+ * The card is a four-row grid: head, tools, prose, metrics. Every card in a row therefore puts its
+ * metrics on the same line as its neighbour, whatever the prose above them does — which is the
+ * difference between a wall of cards and a table you can read across. */
+.stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(24rem,1fr));gap:var(--space-4)}
+/* A COLUMN, NOT FOUR NAMED ROWS. "auto auto 1fr auto" said the third child is the one that absorbs
+ * the slack, which is true of the four children this card has while it is being READ. Edit mode
+ * inserts two "+ Add" buttons into it, the 1fr landed on a button, and the description dropped a
+ * clear inch down the card - the reason a stage card had a hole in the middle of it. A flex
+ * column puts the rule on the element that owns it instead, and then it does not matter how many
+ * controls the editor hangs on the card. */
+.stage{display:flex;flex-direction:column;gap:var(--space-3);break-inside:avoid}
+.stage>.stage-text{flex:1 0 auto}
+.stage-head{display:flex;align-items:center;gap:var(--space-3)}
+/* GREY UNDER THE ICON, not a tint of the accent. The orange wash put a second coloured object on a
+ * card that already carries one (the level), and on the dark theme
+ * --primary-soft is brand-900, a brown disc that reads as a stain rather than as a holder. The
+ * holder is furniture; the ink on it is the only thing that is meant to be orange. */
+.stage-icon{flex:none;display:grid;place-items:center;width:var(--space-8);height:var(--space-8);
+  border-radius:var(--radius-full);background:var(--muted);color:var(--primary-accent);
+  font-size:var(--font-md)}
+.stage-name{font-size:var(--font-md);font-weight:var(--font-weight-semibold);
+  line-height:var(--leading-snug);margin-right:auto}
+/* Which level this stage is at, on the card that claims it. The programme reads the submission
+ * level by level, and until now the only level on the page was the one the team was aiming for. */
+/* NEUTRAL HOLDER, ORANGE INK - the same rule as the icon disc above and the counter further down.
+ * --primary-soft is a peach wash on light and brand-900, a brown stain, on dark, and a card that
+ * already carries an orange icon does not need a third tinted object.
+ * The ink is --primary-accent, the programme accent itself, so the one orange on the page is the
+ * one orange in the app that generates it.
+ *
+ * WHAT IT COSTS, written down rather than found later. On light this label goes from 5.28:1
+ * (brand-700 on its peach tint) to 2.62:1 (#ff6b1a on --muted); on dark it goes from 6.61:1 to
+ * 4.66:1, which still clears AA. That is the same trade the cockpit itself records for every
+ * accent-on-tint pair it paints, made by the owner with these numbers in front of them (31.08:
+ * "всё ровно как логотип #ff6b1a"). The level is never the only way to read a card: the stage
+ * carries it in prose as well as in the pill. */
+.stage-level{flex:none;font-size:var(--font-xs);font-weight:var(--font-weight-semibold);
+  text-transform:uppercase;letter-spacing:.06em;color:var(--primary-accent);
+  background:var(--muted);border-radius:var(--radius-full);padding:var(--space-1) var(--space-3)}
+.stage-text{font-size:var(--font-sm);color:var(--muted-foreground);line-height:var(--leading-relaxed)}
+.metrics{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:var(--space-3)}
+
+/* Each metric is the same four rows, so a label sits level with a label and a chip with a chip,
+ * across cards as well as within one. */
+.metric{display:grid;grid-template-rows:auto minmax(1.6em,auto) auto 1fr;gap:var(--space-2);
+  background:var(--muted);border-radius:var(--radius);padding:var(--space-3)}
+.metric-label{font-size:var(--font-xs);text-transform:uppercase;letter-spacing:.05em;
+  color:var(--muted-foreground);line-height:var(--leading-snug)}
+.metric-value{font-size:var(--font-lg);line-height:var(--leading-none);display:flex;
+  align-items:center;gap:var(--space-2);flex-wrap:wrap;font-variant-numeric:tabular-nums}
+.metric-value strong{font-weight:700}
+.metric-value .was{color:var(--muted-foreground);text-decoration:line-through;
+  text-decoration-thickness:1px}
+.metric-arrow{color:var(--muted-foreground)}
+.metric-value--md{font-size:var(--font-md);line-height:var(--leading-snug)}
+.metric-value--sm{font-size:var(--font-sm);line-height:var(--leading-snug)}
+.metric-value--empty{font-size:var(--font-sm);font-weight:var(--font-weight-semibold);
+  color:var(--muted-foreground)}
+.metric-foot{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2);min-height:1.2em}
+.metric-note{display:flex;flex-direction:column;gap:var(--space-1);font-size:var(--font-xs);
+  color:var(--muted-foreground);line-height:var(--leading-snug)}
+.chip{display:inline-flex;align-items:center;gap:var(--space-1);font-size:var(--font-xs);
+  font-weight:var(--font-weight-semibold);border-radius:var(--radius-full);padding:0 var(--space-3)}
+.chip--success{background:var(--success-soft);color:var(--success-soft-foreground)}
+.chip--warning{background:var(--warning-soft);color:var(--warning-soft-foreground)}
+/* The info chip is the only status pill whose tint was the accent, and on dark that tint is
+ * brand-900 - a brown pill under amber text. It gets the neutral pill instead, with the accent as
+ * ink: it sits inside a metric box, whose surface IS --muted, so --card is the value that still
+ * reads as a pill there. The green and the amber chips keep their tints, because those two carry
+ * meaning a reader is meant to sort by. */
+.chip--info{background:var(--card);color:var(--primary-accent)}
+.chip--muted{background:var(--card);color:var(--muted-foreground)}
+
+/* ── The five numbers ───────────────────────────────────────────────────────────────── */
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--space-3)}
+.kpi{display:grid;grid-template-rows:minmax(2.6em,auto) minmax(2em,auto) auto 1fr;gap:var(--space-2);
+  background:var(--card);border-radius:var(--radius-lg);
+  padding:var(--space-4);break-inside:avoid}
+.kpi-label{font-size:var(--font-xs);text-transform:uppercase;letter-spacing:.05em;
+  color:var(--muted-foreground);line-height:var(--leading-snug)}
+.kpi-value{font-size:var(--font-2xl);font-weight:700;line-height:var(--leading-none);
+  color:var(--primary-accent);font-variant-numeric:tabular-nums}
+/* The row's size, not a tile's. The :not() pair keeps a prose answer and an empty tile out of it:
+ * those two are different kinds of answer rather than longer numbers. */
+.kpis--long .kpi-value:not(.kpi-value--prose):not(.kpi-value--empty){
+  font-size:var(--font-lg);line-height:var(--leading-snug)}
+.kpi-value--prose{font-size:var(--font-base);font-weight:var(--font-weight-semibold);
+  line-height:var(--leading-snug);color:var(--foreground)}
+.kpi-value--empty{font-size:var(--font-sm);font-weight:var(--font-weight-semibold);
+  color:var(--muted-foreground);line-height:var(--leading-snug)}
+.kpi-foot{font-size:var(--font-xs);color:var(--muted-foreground);line-height:var(--leading-snug)}
+
+/* ── Evidence, learnings, advice ────────────────────────────────────────────────────── */
+/* Read across, so they end level: two panels of different heights beside each other read as one
+ * that is unfinished. */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);align-items:stretch}
+.two-col>div{min-width:0;display:flex;flex-direction:column}
+.two-col>div>.card{flex:1}
+.evidence li+li,.learnings li+li{margin-top:var(--space-5)}
+.evidence-what{font-weight:var(--font-weight-semibold);font-size:var(--font-sm)}
+.evidence-where{margin-top:var(--space-1);font-size:var(--font-sm);color:var(--muted-foreground)}
+.evidence-caveat{margin-top:var(--space-2);display:flex;gap:var(--space-2);align-items:flex-start;
+  font-size:var(--font-xs);color:var(--muted-foreground)}
+.evidence-caveat .icon{margin-top:.2em;color:var(--warning-soft-foreground)}
+.evidence,.learnings{display:flex;flex-direction:column}
+.learnings{counter-reset:l}
+.learnings li{counter-increment:l}
+.learning-title{display:flex;gap:var(--space-2);align-items:baseline;
+  font-weight:var(--font-weight-semibold);font-size:var(--font-sm)}
+/* GREY UNDER THE NUMBER, for the same reason as the stage icon above: the holder is furniture and
+ * only the ink on it is meant to be orange. On the dark theme --primary-soft is brand-900, so a
+ * counter sat in a brown disc that read as a stain (owner, 31.08: "тут тоже давай не оранжевый
+ * фон"). --muted is the surface the page already uses for a holder, in both themes. */
+.learning-title::before{content:counter(l);flex:none;display:inline-grid;place-items:center;
+  width:1.5em;height:1.5em;border-radius:var(--radius);background:var(--muted);
+  color:var(--primary-accent);font-size:var(--font-xs)}
+.learning-text{margin-top:var(--space-2);padding-left:calc(1.5em + var(--space-2));
+  font-size:var(--font-sm);color:var(--muted-foreground);line-height:var(--leading-relaxed)}
+.card--advice{background:var(--card)}
+
+/* ── Artifacts and footer ───────────────────────────────────────────────────────────── */
+.links{display:flex;flex-wrap:wrap;gap:var(--space-3)}
+.link{display:inline-flex;align-items:center;gap:var(--space-2);font-size:var(--font-sm);
+  border-radius:var(--radius);padding:var(--space-2) var(--space-3);
+  color:var(--link);text-decoration:none;background:var(--card)}
+.link:hover{color:var(--primary-accent)}
+.foot{margin-top:var(--space-8);padding-top:var(--space-5);
+  display:flex;flex-direction:column;gap:var(--space-3)}
+.caveat{display:flex;gap:var(--space-2);align-items:flex-start;font-size:var(--font-sm);
+  color:var(--muted-foreground);background:var(--card);
+  border-radius:var(--radius);padding:var(--space-3) var(--space-4)}
+.caveat .icon{margin-top:.25em}
+.foot-lines{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-3);
+  font-size:var(--font-xs);color:var(--muted-foreground)}
+.people{display:flex;gap:var(--space-2);align-items:baseline;font-size:var(--font-xs);
+  color:var(--muted-foreground)}
+
+/* ── Narrow ─────────────────────────────────────────────────────────────────────────── */
+@media (max-width:64rem){
+  .stages{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .two-col,.grid-2{grid-template-columns:1fr}
+  .shift{grid-template-columns:1fr}
+  .shift-arrow{transform:rotate(90deg);justify-content:center}
+}
+
+/* ── How it is built, what it cost, what is stuck ──────────────────────────────────── */
+/* A part and what it does. A list rather than tiles: the pieces of an architecture are read in
+ * order, and a grid of boxes makes six equal things out of a chain. */
+.pieces{list-style:none;margin:var(--space-4) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--space-3)}
+.piece{border-left:2px solid var(--border);padding-left:var(--space-4)}
+.piece-name{font-size:var(--font-sm);font-weight:var(--font-weight-semibold);
+  display:flex;align-items:baseline;gap:var(--space-2);flex-wrap:wrap}
+.piece-tool{font-size:var(--font-xs);font-weight:var(--font-weight-regular);color:var(--muted-foreground);
+  background:var(--muted);border-radius:var(--radius-full);padding:0 var(--space-3)}
+.piece-role{font-size:var(--font-sm);color:var(--muted-foreground);line-height:var(--leading-relaxed)}
+.field--block{margin-top:var(--space-5)}
+/* WHAT A REVIEWER CAN OPEN. A claim with no address behind it is a claim, and the score has always
+ * asked for one - there was simply nowhere on the page to write it. Name on the left, address on
+ * the right, and a URL is the one string on this page that is allowed to break anywhere. */
+.links{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--space-2)}
+.link{display:flex;align-items:baseline;gap:var(--space-3);flex-wrap:wrap;font-size:var(--font-sm)}
+.link-kind{flex:none;min-width:9rem;color:var(--muted-foreground)}
+.link-url{color:var(--primary-accent);overflow-wrap:anywhere;word-break:break-word}
+
+/* A cost is a line, and a team has as many lines as it has: people, licences, infra, the review
+ * time nobody budgets for. One sentence each, the figure beside it, and how true that figure is -
+ * a list rather than one paragraph, because the shape that fits one team's answer fits nobody
+ * else's, and a line that does not apply is deleted rather than left saying nothing. */
+.costs{list-style:none;margin:var(--space-3) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--space-4)}
+.cost{border-left:2px solid var(--border);padding-left:var(--space-4)}
+.cost-what{font-size:var(--font-sm);line-height:var(--leading-relaxed)}
+.cost-foot{margin-top:var(--space-2);display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap}
+.cost-amount{font-size:var(--font-sm);font-weight:var(--font-weight-semibold);
+  font-variant-numeric:tabular-nums}
+/* Nothing to say is said in the same grey as everywhere else, and not in bold. */
+.cost-amount:empty{font-weight:var(--font-weight-regular)}
+/* The muted and info pills are drawn on --card, which IS the surface here: a cost marked Not
+ * tracked would print as bare text beside neighbours printing as pills. */
+.cost .chip--muted,.cost .chip--info{background:var(--muted)}
+/* THE EMPTY LIST IS AN ANSWER, and it has to read as one. "Nothing was spent beyond the licences
+ * we had" is said by deleting every line, and a blank space under a label says nothing at all -
+ * so the list says it instead. :empty cannot see this: the pristine row travels in the list as a
+ * <template>, which is a child. */
+.costs:not(:has(> [data-row]))::before{content:"Not stated";font-size:var(--font-sm);
+  color:var(--muted-foreground)}
+.costs[data-list="costs.run"]:not(:has(> [data-row]))::before{
+  content:"The AI cost tile above is the whole answer"}
+
+.issues{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--space-4)}
+.issue-what{font-size:var(--font-sm);line-height:var(--leading-relaxed)}
+/* The way out, marked as a step forward. A blocker with no way out still prints a line, because
+ * "we do not know yet" is the answer the programme is asking for and a silent gap is not. */
+.issue-fix{margin-top:var(--space-2);display:flex;gap:var(--space-2);align-items:flex-start;
+  font-size:var(--font-sm);color:var(--primary-soft-foreground)}
+.issue-fix--none{color:var(--muted-foreground)}
+.issue-fix .icon{margin-top:.25em;flex:none}
+.issue-needs{margin-top:var(--space-2);font-size:var(--font-xs);color:var(--muted-foreground)}
+
+.qa-q{font-size:var(--font-xs);text-transform:uppercase;letter-spacing:.06em;
+  color:var(--muted-foreground);margin-bottom:var(--space-2)}
+/* Body prose, at the size every other card sets prose in. It was --font-md, the LEAD size this
+ * page spends on exactly one thing per screenful (the tagline, the north star, a metric value),
+ * and two paragraphs of ordinary answer set at that size shouted over the north star they sit
+ * below (owner, 30.08: why is the type big here). A label above and prose under it is the same
+ * pair as .field-label / .field-text, so it takes the same two sizes. */
+.qa-a{font-size:var(--font-sm);line-height:var(--leading-relaxed)}
+
+/* ── Section numbers ────────────────────────────────────────────────────────────────
+ * A handle, not a decoration: "your section 7 is thin" has to be findable without counting. It
+ * takes the neutral holder and the accent ink every other counter on this page takes. */
+/* THE NUMBER IS PART OF THE HEADING, not a label stuck to it.
+ *
+ * Two rounds of this. It was a filled chip between the icon and the title — three objects in a row
+ * that had two (owner, 01.09: "цифры блоков не нравятся"). Then it was small caption-sized text,
+ * which fixed the furniture and introduced a second problem: a 12px number beside a 20px heading is
+ * a different KIND of thing sitting in the same line, and it read as a stray annotation (owner:
+ * "номер размером и стилем выбивается, нужно размером с заголовком").
+ *
+ * So it takes the heading's own size and weight and differs only in ink. That is how a numbered
+ * chapter has always been set: the number and the title are one line of type, and the number is
+ * quieter because you read past it once you have found the section you wanted. */
+.section-no{flex:none;font-size:inherit;font-weight:inherit;color:var(--muted-foreground);
+  font-variant-numeric:tabular-nums}
+.section-name{min-width:0}
+
+/* ── The page as a form ─────────────────────────────────────────────────────────────
+ * Every one of these rules is about CONTENT, not about a mode, which is why they are here rather
+ * than inside the editor: a template opened by somebody with no JavaScript, or printed, still has
+ * to show which questions are unanswered.
+ *
+ * An unanswered slot is the template's own instruction, set in the muted ink so a page that is
+ * half filled reads as half filled at a glance. An empty slot prints what its absence means. */
+[data-ph]{color:var(--muted-foreground)}
+[data-empty]:empty::before{content:attr(data-empty);color:var(--muted-foreground)}
+.piece-role[data-empty]:empty::before,.metric-note [data-empty]:empty::before{font-style:normal}
+
+/* ── The editor ─────────────────────────────────────────────────────────────────────
+ * One bar, bottom centre, that is not there until the script runs — a control that does nothing
+ * without JavaScript must not be drawn by the markup (owner, 31.08: "там должен быть понятный ux").
+ * It prints as nothing: the saved and printed document is the deliverable, the bar is the tool. */
+/* A DARK BAR SO THAT ONE THING ON IT CAN BE ORANGE. On a white bar the brand colour had to fight
+ * the page for it - the card behind it is white too - and a glow was the only way to lift it, which
+ * smudged the paper around the bar. Black is not the page and is not the paper: the bar reads as a
+ * tool laid on top of the document, and the one orange thing on it is the only call to action the
+ * page has. neutral-900 rather than --foreground, so the bar stays black when the page goes dark. */
+.tools{position:fixed;left:50%;bottom:var(--space-5);z-index:50;
+  transform:translateX(calc(-50% - var(--qshift-bar)));transition:transform .18s ease;
+  display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);
+  background:var(--neutral-900);border-radius:var(--radius-full);
+  box-shadow:0 1px 2px rgb(0 0 0 / .18),0 10px 28px rgb(0 0 0 / .26)}
+.tool{display:inline-flex;align-items:center;gap:var(--space-2);border:0;cursor:pointer;
+  font-family:inherit;font-size:var(--font-sm);font-weight:var(--font-weight-semibold);
+  border-radius:var(--radius-full);padding:var(--space-2) var(--space-4);
+  background:transparent;color:var(--muted-foreground)}
+.tool:hover{background:var(--muted);color:var(--foreground)}
+.tool:focus-visible{outline:2px solid var(--primary-accent);outline-offset:2px}
+.tool[aria-pressed="true"]{background:var(--primary);color:var(--primary-foreground)}
+
+/* The bar's own buttons, on the black. .tool is worn by the panel's close button too, which sits on
+ * white paper, so none of this is allowed to leak out of #tools. */
+#tools .tool{color:var(--neutral-400)}
+#tools .tool:hover{background:rgb(255 255 255 / .10);color:var(--neutral-0)}
+#tools .tool:focus-visible{outline-color:var(--brand-200);outline-offset:3px}
+/* ONE ORANGE ON THE BAR, AND IT IS THE ONE THING TO DO. Saving is what this page is for - a team
+ * that does not press it has not submitted anything. The toggles held the brand colour before,
+ * which read as though switching modes were the important act; a mode that is on is now simply
+ * white on the black, which is what "on" looks like when the surface is dark. */
+#tools .tool[aria-pressed="true"]{background:var(--neutral-0);color:var(--neutral-900)}
+#tools .tool[aria-pressed="true"]:hover{background:var(--neutral-0);color:var(--neutral-900)}
+/* EDITING IS THE FIRST THING TO DO, AND IT WAS A GHOST. Typing into this page is the whole point
+ * of it and the button that opens typing was grey text among grey text, three places left of the
+ * only lit thing on the bar. It is a filled white pill now and it stands next to Save, in the
+ * order the work happens: edit, then file. */
+#tools .tool--white{background:var(--neutral-0);color:var(--neutral-900)}
+#tools .tool--white:hover{background:var(--neutral-100);color:var(--neutral-900)}
+#tools .tool--white:active{background:var(--neutral-200)}
+/* ONE ORANGE ON THE BAR, ALWAYS, AND IT IS ALWAYS THE THING TO DO NEXT. White cannot say "on" for
+ * this one any more - white is what it looks like off - so pressing it takes the orange, which
+ * Save has just given up: inside edit mode the only lit button on the bar is Done. */
+#tools .tool--white[aria-pressed="true"],
+#tools .tool--white[aria-pressed="true"]:hover{background:var(--primary);color:var(--primary-foreground)}
+#tools .tool--white[aria-pressed="true"]:hover{filter:brightness(1.1)}
+/* No shadow. A pill this colour on black is already the brightest thing on the page, and a shadow
+ * under it only spills past the bar onto the paper behind. */
+#tools .tool--go{background:var(--primary);color:var(--primary-foreground);
+  padding-inline:var(--space-5);box-shadow:none}
+#tools .tool--go:hover{background:var(--primary);color:var(--primary-foreground);opacity:1;filter:brightness(1.1)}
+#tools .tool--go:active{filter:brightness(.92)}
+#tools .tool--draft{border:1px dashed rgb(255 255 255 / .28);color:var(--neutral-400);font-weight:var(--font-weight-semibold)}
+#tools .tool--draft:hover{border-color:rgb(255 255 255 / .45)}
+/* NOT WHILE YOU ARE STILL TYPING. Two lit buttons at once ask a person mid-sentence to decide
+ * between finishing and filing, and the file written from a half-typed field is a file somebody has
+ * to open again anyway. Finish, then save: the bar offers one thing at a time. The keyboard is not
+ * taken away - Cmd/Ctrl-S still writes the file from inside edit mode, for whoever reaches for it. */
+[data-editing] #tool-save{display:none}
+/* A FILED SUBMISSION IS A DOCUMENT, NOT AN EDITOR. Every file this page writes carries the editor
+ * inside it, and that is what lets a team open last week's submission and keep going. But the
+ * person it is sent to opens a document, and a bar of buttons laid over it reads as unfinished
+ * work. So a saved file arrives with the bar folded down to one quiet word, and the first click on
+ * it unfolds the rest - nothing is lost, and nothing is offered to a reader who only wants to
+ * read. */
+[data-filed] #tools{background:none;box-shadow:none;padding:0;gap:0}
+[data-filed] #tool-count,[data-filed] #tool-questions,[data-filed] #tool-save,
+[data-filed] #tool-draft{display:none}
+[data-filed] #tool-edit{background:var(--card);color:var(--muted-foreground);
+  box-shadow:0 1px 2px rgb(0 0 0 / .14),0 6px 18px rgb(0 0 0 / .12)}
+[data-filed] #tool-edit:hover{background:var(--card);color:var(--primary-accent)}
+.tool-count{font-size:var(--font-xs);color:var(--neutral-400);
+  font-variant-numeric:tabular-nums;padding-inline:var(--space-2);white-space:nowrap}
+
+/* WHAT A SLOT LOOKS LIKE WHEN IT IS ONE. Outside edit mode nothing on the page moves; inside it,
+ * every writable place is outlined the moment the mode is entered, because the first question a
+ * person asks a page like this is "what can I change" and hover-to-discover does not answer it. */
+/* A FIELD HAS TO LOOK LIKE A FIELD. The mark used to be one dashed hairline in --border, which is
+ * the palest grey the page owns: on white paper, at arm's length, on a call, it was not there. A
+ * slot now carries the brand colour as a wash, so what can be typed into is the thing that is
+ * orange - and the wash is spread by a box-shadow rather than by padding, because nothing on this
+ * page is allowed to move when the mode changes. */
+[data-editing] [data-edit]{outline:1px dashed rgb(255 107 26 / .55);outline-offset:2px;border-radius:2px;
+  min-width:2ch;min-height:1.2em;display:inline-block;cursor:text}
+/* Everything but an enum. An enum is a pill whose BACKGROUND is the answer - green for measured,
+ * amber for estimated - and washing it orange would take the meaning out of the colour it is
+ * showing. It gets the dashed ring and its own \u21bb, which is affordance enough. */
+[data-editing] [data-edit]:not([data-enum]){background:var(--edit-wash);box-shadow:0 0 0 2px var(--edit-wash)}
+/* A pill is small and its delete button sits inside it, so the text needs somewhere to stop. */
+[data-editing] .tag[data-row]{padding-right:var(--space-6);min-width:8ch}
+[data-editing] p[data-edit],[data-editing] h1[data-edit]{display:block}
+[data-editing] [data-edit]:hover{outline-color:var(--primary-accent)}
+[data-editing] [data-edit]:not([data-enum]):hover{background:var(--edit-wash-hover);box-shadow:0 0 0 2px var(--edit-wash-hover)}
+[data-editing] [data-edit]:focus{outline:2px solid var(--primary-accent);outline-offset:2px}
+
+/* ROOM TO WORK, AND ONLY WHILE WORKING. The reading page still does not move a pixel between one
+ * open and the next - but a page being TYPED into is a different object from a page being read, and
+ * holding it to the same geometry was the mistake: rings 5px apart touched and read as one field,
+ * and a delete button sitting on the last words of a sentence is a delete button somebody presses
+ * by accident. Edit mode buys the room, and gives it back on the way out. */
+[data-editing] .facts,[data-editing] .person,[data-editing] .piece,[data-editing] .metric-note,
+[data-editing] .evidence li,[data-editing] .learnings li,[data-editing] .issue,
+[data-editing] .kpi,[data-editing] .metric,[data-editing] .field,[data-editing] .field-stack,
+[data-editing] .head,[data-editing] .north-foot,[data-editing] .shift-side{line-height:var(--leading-relaxed)}
+[data-editing] p[data-edit],[data-editing] h1[data-edit],[data-editing] h3[data-edit]{margin-block:6px}
+[data-editing] .person-name,[data-editing] .person-role,
+[data-editing] .piece-name,[data-editing] .piece-role,
+[data-editing] .evidence-what,[data-editing] .evidence-where,[data-editing] .evidence-caveat,
+[data-editing] .metric-note>[data-edit]{margin-block:5px}
+[data-editing] .chip-row{margin-block:5px}
+/* Side by side on one line, each with a ring of its own to keep clear of. */
+[data-editing] .piece-name>[data-edit]+[data-edit],
+[data-editing] .metric-shift>[data-edit]+[data-edit]{margin-left:6px}
+/* A LANE FOR THE \u00d7. It is pinned to the top right corner of its row, and a full-width sentence
+ * runs straight under it. The row is given the width of the button back as padding. */
+[data-editing] [data-row]{padding-right:var(--space-8)}
+[data-editing] .tag[data-row]{padding-right:var(--space-6)}
+[data-editing] [data-enum]{cursor:pointer}
+[data-editing] [data-enum]::after{content:"\21bb";margin-left:.4em;font-weight:400;opacity:.7}
+
+/* Add and remove, on the list they belong to. They are buttons rather than a drag handle because a
+ * team fills this once, on a call, and a control that has to be discovered is a control nobody
+ * uses. */
+.row-del{position:absolute;top:0;right:0;display:none;width:1.6em;height:1.6em;border:0;
+  border-radius:var(--radius-full);background:var(--muted);color:var(--muted-foreground);
+  cursor:pointer;font:inherit;font-size:var(--font-xs);line-height:1;
+  user-select:none;-webkit-user-select:none}
+.row-del::before{content:"\00d7"}
+.row-del:hover{background:var(--primary);color:var(--primary-foreground)}
+[data-editing] [data-row]{position:relative}
+[data-editing] .row-del{display:grid;place-items:center}
+.row-add{display:none;align-self:flex-start;margin-top:var(--space-3);border:1px dashed var(--border);background:none;
+  cursor:pointer;font-family:inherit;font-size:var(--font-xs);font-weight:var(--font-weight-semibold);
+  color:var(--muted-foreground);border-radius:var(--radius-full);padding:var(--space-1) var(--space-3)}
+.row-add:hover{color:var(--primary-accent);border-color:var(--primary-accent)}
+[data-editing] .row-add{display:inline-block}
+
+/* ── When nothing is running at all ─────────────────────────────────────────────────
+ * The bar is drawn by the script and starts hidden, so a host that refuses scripts leaves a page
+ * with no editor, no explanation and no way to tell that anything is missing. This says it, and
+ * the script's first act is to hide it - which is why it is written the other way round from the
+ * bar: what the reader sees when nothing runs has to be the default. */
+.nojs{position:fixed;left:50%;transform:translateX(-50%);bottom:var(--space-5);z-index:56;
+  width:min(44rem,calc(100vw - var(--space-6)));
+  background:var(--warning-soft);color:var(--warning-soft-foreground);
+  border-radius:var(--radius);padding:var(--space-3) var(--space-4);
+  box-shadow:0 1px 2px rgb(0 0 0 / .18),0 10px 28px rgb(0 0 0 / .26);
+  font-size:var(--font-sm);line-height:var(--leading-snug)}
+[data-js] .nojs{display:none}
+
+/* ── When the page is not a file ────────────────────────────────────────────────────
+ * Opened out of a SharePoint or Teams preview the document is inside a sandboxed frame: the
+ * script runs, the editor works, the counter counts - and the browser silently refuses the
+ * download. A team presses Save HTML, nothing happens, and the page says nothing about why
+ * (Aliaksei, 10.09: "the Save HTML button does not seem to be working"). It says so now. */
+.notice{position:fixed;left:50%;bottom:calc(var(--space-5) + 3.75rem);z-index:55;
+  transform:translateX(calc(-50% - var(--qshift-bar)));
+  width:min(44rem,calc(100vw - var(--space-6)));
+  display:flex;gap:var(--space-3);align-items:flex-start;
+  background:var(--warning-soft);color:var(--warning-soft-foreground);
+  border-radius:var(--radius);padding:var(--space-3) var(--space-4);
+  box-shadow:0 1px 2px rgb(0 0 0 / .18),0 10px 28px rgb(0 0 0 / .26);
+  font-size:var(--font-sm);line-height:var(--leading-snug);transition:transform .18s ease}
+.notice-text{flex:1}
+.notice-do{margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;flex-wrap:wrap}
+.notice-b{border:1px solid rgb(0 0 0 / .25);background:none;border-radius:var(--radius-full);
+  padding:var(--space-1) var(--space-3);font:inherit;font-weight:var(--font-weight-semibold);
+  color:inherit;cursor:pointer}
+.notice-b:hover{background:rgb(0 0 0 / .06)}
+.notice-x{border:0;background:none;font:inherit;font-size:var(--font-md);line-height:1;
+  color:inherit;cursor:pointer;opacity:.6;padding:0 var(--space-1)}
+.notice-x:hover{opacity:1}
+@keyframes notice-flash{0%,100%{transform:translateX(calc(-50% - var(--qshift-bar))) scale(1)}
+  50%{transform:translateX(calc(-50% - var(--qshift-bar))) scale(1.03)}}
+.notice[data-flash]{animation:notice-flash .34s ease 2}
+
+/* ── The questions ──────────────────────────────────────────────────────────────────
+ * The panel is the questionnaire, read off the page itself: every slot carries the schema's own
+ * question, so what a team is asked while filling the template cannot drift from what the
+ * validator checks. It is also the only progress view the manual path has. */
+.qpanel{position:fixed;top:0;right:0;bottom:0;width:min(var(--qpanel-w),100%);z-index:60;
+  background:var(--card);box-shadow:-8px 0 32px rgba(0,0,0,.16);
+  display:flex;flex-direction:column;transform:translateX(100%);transition:transform .18s ease}
+[data-questions] .qpanel{transform:none}
+/* CENTRED IN WHAT IS LEFT, NOT RESIZED. The paper keeps its full width and simply slides half a
+ * drawer to the left, so the page reads centred between the left edge and the open panel. The
+ * shift is capped by the margin the page already had (less 1rem, which covers a classic
+ * scrollbar's width in 100vw), so on a narrow window nothing moves and the drawer is a plain
+ * overlay again. */
+[data-questions]{
+  --qshift: min(calc(var(--qpanel-w) / 2), max(0px, calc((100vw - var(--page-w)) / 2 - 1rem)));
+  --qshift-bar: min(calc(var(--qpanel-w) / 2), max(0px, calc((100vw - 30rem) / 2)));
+}
+/* OVER THE PAGE, NOT BESIDE IT. Opening the questions used to take 24rem off the document and
+ * reflow every two-column card into a column of slivers: the reader lost their place in the page
+ * they were being asked about. The panel is a drawer on top now - the paper underneath does not
+ * move, and closing it changes nothing. */
+.qpanel-head{display:flex;align-items:center;gap:var(--space-3);
+  padding:var(--space-5) var(--space-5) var(--space-4)}
+.qpanel-title{font-size:var(--font-md);font-weight:var(--font-weight-semibold);margin-right:auto}
+.qpanel-body{overflow:auto;padding:0 var(--space-5) var(--space-6);flex:1}
+.qgroup+.qgroup{margin-top:var(--space-5)}
+.qgroup-name{display:flex;align-items:center;gap:var(--space-2);font-size:var(--font-xs);
+  text-transform:uppercase;letter-spacing:.06em;color:var(--muted-foreground);
+  margin-bottom:var(--space-2)}
+.qgroup-count{margin-left:auto;font-variant-numeric:tabular-nums;text-transform:none;letter-spacing:0}
+.qitem{display:flex;gap:var(--space-3);width:100%;text-align:left;border:0;background:none;
+  cursor:pointer;font-family:inherit;font-size:var(--font-sm);line-height:var(--leading-snug);
+  color:var(--muted-foreground);padding:var(--space-2);border-radius:var(--radius)}
+.qitem:hover{background:var(--muted);color:var(--foreground)}
+.qitem::before{content:"";flex:none;width:.7em;height:.7em;margin-top:.4em;border-radius:50%;
+  border:1.5px solid var(--border)}
+.qitem[data-done]::before{background:var(--primary);border-color:var(--primary)}
+.qitem[data-done]{color:var(--foreground)}
+
+@media (max-width:64rem){
+  .tools{flex-wrap:wrap;justify-content:center;max-width:calc(100vw - var(--space-6))}
+}
+
+@media print{
+  .tools,.qpanel,.row-add,.row-del,.nojs,.notice{display:none!important}
+}
+
+/* ── Print ──────────────────────────────────────────────────────────────────────────── */
+@media print{
+  @page{size:A4;margin:12mm}
+  :root{color-scheme:light}
+  body{background:var(--card);font-size:12px}
+  .page{max-width:none;padding:0;transform:none}
+  .theme{display:none}
+  .section{margin-top:18px;break-inside:avoid-page}
+  .kpis{grid-template-columns:repeat(5,1fr)}
+  a{color:inherit}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head">
+<div class="head-top">
+<p class="brand"><svg aria-label="AI/RUN" class="brand-word" fill="none" role="img" viewbox="78.7 124.6 227.1 130.2" xmlns="http://www.w3.org/2000/svg"><defs><clippath id="airun-word"><rect fill="currentColor" height="64.7462" transform="translate(79 194.824)" width="225.977" x="0" y="0"></rect></clippath></defs><g clip-path="url(#airun-word)"><path d="M78.6743 199.076 108.955 199.076C114.915 199.076 119.253 199.381 121.969 199.99 124.685 200.599 127.013 202.012 128.967 204.214 130.921 206.43 131.919 209.2 131.975 212.524L131.975 212.842C131.975 218.271 130.478 221.983 127.471 223.991 125.835 225.099 123.327 225.916 119.959 226.442L119.959 226.844C120.486 226.789 121.013 226.761 121.539 226.761 122.274 226.761 122.994 226.816 123.673 226.913 126.792 227.329 128.995 228.423 130.326 230.196 131.642 231.968 132.307 234.267 132.307 237.12L132.307 249.571C132.307 251.385 130.838 252.853 129.023 252.853L127.124 252.853C125.309 252.853 123.84 251.385 123.84 249.571L123.84 238.062C123.84 236.165 123.452 234.614 122.689 233.395 121.927 232.176 120.569 231.484 118.615 231.304 116.661 231.124 114.18 231.027 111.173 231.027L90.8007 231.027C88.9852 231.027 87.5161 232.495 87.5161 234.309L87.5161 249.571C87.5161 251.385 86.0471 252.853 84.2316 252.853L81.9588 252.853C80.1433 252.853 78.6743 251.385 78.6743 249.571L78.6743 227.578C78.6743 225.778 80.1156 224.323 81.9172 224.296L87.5023 224.227 109.981 224.227C113.667 224.227 116.8 223.686 119.363 222.606 121.927 221.526 123.23 218.95 123.285 214.892L123.285 214.657C123.285 212.441 122.454 210.419 120.791 208.563 119.128 206.721 115.261 205.793 109.205 205.793L78.6881 205.793" fill="currentColor"></path><path d="M203.429 229.919C203.429 235.722 202.459 240.403 200.546 243.948 198.62 247.507 195.862 250.125 192.273 251.815 188.683 253.504 183.195 254.349 175.809 254.349 168.422 254.349 162.809 253.352 159.109 251.344 155.422 249.336 152.664 246.732 150.835 243.519 149.02 240.306 148.105 235.763 148.105 229.919L148.105 202.358C148.105 200.544 149.574 199.076 151.389 199.076L153.371 199.076C155.187 199.076 156.656 200.544 156.656 202.358L156.656 229.919C156.656 235.722 158.139 240.084 161.091 243.006 164.042 245.929 168.976 247.397 175.892 247.397 183.694 247.397 188.836 245.845 191.289 242.729 193.742 239.613 194.975 235.348 194.975 229.919L194.975 202.358C194.975 200.544 196.444 199.076 198.26 199.076L200.158 199.076C201.974 199.076 203.443 200.544 203.443 202.358L203.443 229.919 203.429 229.919Z" fill="currentColor"></path><path d="M219.254 249.571 219.254 202.358C219.254 200.544 220.723 199.076 222.538 199.076L226.904 199.076C227.874 199.076 228.803 199.505 229.426 200.253L259.278 235.819C261.246 238.173 265.085 236.774 265.085 233.713L265.085 202.358C265.085 200.544 266.554 199.076 268.369 199.076L270.268 199.076C272.083 199.076 273.552 200.544 273.552 202.358L273.552 249.571C273.552 251.385 272.083 252.853 270.268 252.853L265.902 252.853C264.932 252.853 264.004 252.424 263.38 251.676L233.612 216.125C231.644 213.77 227.805 215.169 227.805 218.23L227.805 249.571C227.805 251.385 226.336 252.853 224.52 252.853L222.538 252.853C220.723 252.853 219.254 251.385 219.254 249.571Z" fill="currentColor"></path><path d="M287.122 207.87 287.122 201.444C287.122 201.139 286.872 200.876 286.554 200.876L283.726 200.876C283.422 200.876 283.158 200.627 283.158 200.308 283.158 200.004 283.408 199.741 283.726 199.741L291.875 199.741C292.18 199.741 292.444 199.99 292.444 200.308 292.444 200.613 292.194 200.876 291.875 200.876L289.048 200.876C288.743 200.876 288.48 201.126 288.48 201.444L288.48 207.87C288.48 208.175 288.23 208.438 287.912 208.438L287.662 208.438C287.357 208.438 287.094 208.189 287.094 207.87L287.122 207.87Z" fill="currentColor"></path><path d="M293.719 207.87 293.719 200.308C293.719 200.004 293.968 199.741 294.287 199.741L295.41 199.741C295.617 199.741 295.798 199.851 295.895 200.031L299.193 205.848C299.415 206.236 299.969 206.222 300.177 205.848L303.378 200.045C303.475 199.865 303.669 199.754 303.877 199.754L304.861 199.754C305.166 199.754 305.429 200.004 305.429 200.322L305.429 207.87C305.429 208.175 305.18 208.438 304.861 208.438L304.626 208.438C304.321 208.438 304.057 208.189 304.057 207.87L304.057 203.66C304.057 203.078 303.267 202.884 303.004 203.397L300.523 208.133C300.426 208.313 300.232 208.438 300.024 208.438L299.359 208.438C299.151 208.438 298.957 208.327 298.86 208.147L296.172 203.134C295.895 202.621 295.118 202.815 295.118 203.397L295.118 207.87C295.118 208.175 294.869 208.438 294.55 208.438L294.301 208.438C293.996 208.438 293.733 208.189 293.733 207.87L293.719 207.87Z" fill="currentColor"></path></g><path d="M124.998 156.563 111.86 131.966 110.835 131.966 97.8629 156.563 94.218 163.515 87.067 177.032C86.4988 178.113 85.3762 178.777 84.1705 178.777L82.2857 178.777C79.8189 178.777 78.239 176.174 79.3754 173.985L103.836 126.773C104.404 125.679 105.527 125 106.746 125L115.907 125C117.126 125 118.249 125.679 118.817 126.759L143.694 173.972C144.844 176.16 143.264 178.777 140.783 178.777L138.926 178.777C137.72 178.777 136.612 178.113 136.03 177.046L128.726 163.515 125.012 156.563 124.998 156.563Z" fill="currentColor"></path><path d="M160.253 175.495 160.253 128.282C160.253 126.468 161.722 125 163.537 125L165.436 125C167.252 125 168.721 126.468 168.721 128.282L168.721 175.495C168.721 177.309 167.252 178.777 165.436 178.777L163.537 178.777C161.722 178.777 160.253 177.309 160.253 175.495Z" fill="currentColor"></path></svg></p>
+<button aria-label="Switch between light and dark" class="theme" id="theme-toggle" type="button">
+<svg aria-hidden="true" class="icon theme-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg><svg aria-hidden="true" class="icon theme-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+</button>
+</div>
+<h1 class="team" data-edit="team.name">OpsAssist Team</h1>
+<p class="team-code" data-edit="team.code">0199-EDJO-CDS</p>
+<p class="tagline" data-edit="team.tagline">Delivers AI-assisted L3 engineering support, production operations, incident investigation, root-cause analysis, service reliability improvements, automation, and operational excellence for Edward Jones Core Digital Services.</p>
+<div class="card identity">
+<dl class="facts"><div class="fact"><dt>Account</dt><dd data-edit="team.account">Edward Jones (Core Digital Services - CDS)</dd></div><div class="fact"><dt>Coach</dt><dd data-edit="team.coach">Anusha Sivakoti</dd></div><div class="fact"><dt>Team</dt><dd data-edit="team.size">9 participants</dd></div><div class="fact"><dt>Deadline</dt><dd>30 September 2026</dd></div></dl>
+<div class="people-strip" data-list="team.people"><span class="person" data-row="team.people[0]"><span class="person-name" data-edit="team.people[0].name">Pardeep Kumar</span><span class="person-role" data-edit="team.people[0].role">Cloud Engineering Manager</span></span><span class="person" data-row="team.people[1]"><span class="person-name" data-edit="team.people[1].name">Hardik Parmar</span><span class="person-role" data-edit="team.people[1].role">Lead Software Engineer</span></span><span class="person" data-row="team.people[2]"><span class="person-name" data-edit="team.people[2].name">Ravi Yeruva</span><span class="person-role" data-edit="team.people[2].role">Lead System Engineer</span></span><span class="person" data-row="team.people[3]"><span class="person-name" data-edit="team.people[3].name">Pramod Pant</span><span class="person-role" data-edit="team.people[3].role">Senior Software Engineer</span></span><span class="person" data-row="team.people[4]"><span class="person-name" data-edit="team.people[4].name">Rohit Mishra</span><span class="person-role" data-edit="team.people[4].role">Senior Software Engineer</span></span><span class="person" data-row="team.people[5]"><span class="person-name" data-edit="team.people[5].name">Azael Gonzalez</span><span class="person-role" data-edit="team.people[5].role">Lead System Engineer</span></span><span class="person" data-row="team.people[6]"><span class="person-name" data-edit="team.people[6].name">Gaurav Sharma</span><span class="person-role" data-edit="team.people[6].role">Delivery Manager</span></span><span class="person" data-row="team.people[7]"><span class="person-name" data-edit="team.people[7].name">Ponnaga Vanimisetti</span><span class="person-role" data-edit="team.people[7].role">Director, Delivery Management</span></span><span class="person" data-row="team.people[8]"><span class="person-name" data-edit="team.people[8].name">Anusha Sivakoti</span><span class="person-role" data-edit="team.people[8].role">Project Manager</span></span></div>
+<div aria-label="Evidence completeness" class="readiness">
+<div class="readiness-bar"><span style="width:28%"></span></div>
+<p class="readiness-text"><strong>9 of 32</strong> facts in this template are backed by a number or a source.
+  Still open: what the team delivers for the client, the delivery pain you started from, the baseline period to compare against, the target state of the factory, the client business outcome, at least two sdlc stages described, and 17 more.</p>
+</div>
+</div>
+</header>
+<section class="section">
+<h2 class="section-title"><span class="section-no">01</span><svg aria-hidden="true" class="icon section-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></svg><span class="section-name">Where we started</span></h2>
+<div class="card grid-2">
+<div class="field">
+<p class="field-label">The pain we started from</p>
+<p class="field-text" data-edit="context.painPoint">Before OpsAssist, support engineers spent significant time manually searching across Jira, Confluence, GitHub, ServiceNow, and knowledge repositories to gather incident context. Context switching, manual root-cause analysis, dependence on tribal knowledge, and scattered information slowed investigations, delayed onboarding, and created inconsistent support outcomes for engineers, engineering managers, and client stakeholders.</p>
+</div>
+<div class="field-stack">
+<div class="field">
+<p class="field-label">AI tooling on this project</p>
+<p class="chip-row" data-list="context.aiTools"><span class="tag" data-edit="context.aiTools[0]" data-empty="Not stated" data-row="context.aiTools[0]">Elitea AI Platform</span><span class="tag" data-edit="context.aiTools[1]" data-empty="Not stated" data-row="context.aiTools[1]">RAAC Marketplace Assets</span><span class="tag" data-edit="context.aiTools[2]" data-empty="Not stated" data-row="context.aiTools[2]">Internal AI Agents</span></p>
+</div>
+<div class="field">
+<p class="field-label">Baseline period</p>
+<p class="field-text" data-edit="context.baseline">December 2026 baseline period, before OpsAssist activation.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<h2 class="section-title"><span class="section-no">02</span><svg aria-hidden="true" class="icon section-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg><span class="section-name">North star</span></h2>
+<div class="card card--north">
+<p class="north-goal" data-edit="northStar.goal">Our North Star is to build a Support Engineering AI Factory where routine support and investigation activities become AI-assisted while governance and business-critical decisions remain human-controlled. OpsAssist will support incident triage, knowledge discovery, RCA recommendations, cross-system correlation, documentation generation, delivery analytics, and ticket preparation. Human engineers will retain final approvals, production decisions, risk assessment, change-management approvals, customer communication, escalation, and exception handling.</p>
+<div class="levels">
+<p class="field-label">AI maturity</p>
+<p class="level-score">1<span class="level-of"> → 3</span></p>
+<p class="level-legend">Level <span data-edit="northStar.currentLevel" data-num="1-3">3</span> · target <span data-edit="northStar.targetLevel" data-num="1-3">4</span></p>
+<div aria-label="AI maturity 1 of 3, target 3" aria-valuemax="3" aria-valuemin="0" aria-valuenow="1" class="meter" role="meter">
+<div class="meter-track"><div class="meter-fill" style="width:33.33333333333333%"></div><div class="meter-target" style="left:100%"></div></div>
+<div class="meter-ticks"><span>0</span><span>1</span><span>2</span><span>3</span></div>
+</div>
+</div>
+<div class="shift">
+<div class="shift-side"><p class="field-label">Today</p><p data-edit="northStar.shiftFrom">Engineers manually access Jira, GitHub, Confluence, and ServiceNow, perform multiple searches, correlate scattered knowledge, and conduct largely manual root-cause analysis.</p></div>
+<div class="shift-arrow"><svg aria-hidden="true" class="icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div>
+<div class="shift-side shift-side--to"><p class="field-label">The factory</p><p data-edit="northStar.shiftTo">OpsAssist provides a single conversational interface that correlates enterprise information, generates RCA suggestions, and produces proactive analytics and recommendations while engineers focus on decisions and governance.</p></div>
+</div>
+<div class="north-foot">
+<div class="field"><p class="field-label">What the client gets</p><p class="field-text" data-edit="northStar.clientOutcome">Faster issue resolution, reduced operational risk, improved service reliability, shorter incident-resolution cycles, and more consistent support outcomes.</p></div>
+</div>
+</div>
+</section>
+<section class="section">
+<h2 class="section-title"><span class="section-no">03</span><svg aria-hidden="true" class="icon section-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"></path><rect height="8" rx="1" width="8" x="14" y="2"></rect></svg><span class="section-name">How it is built</span></h2>
+<div class="card">
+<p class="north-goal" data-edit="architecture.summary">A user request flows through the Elitea-based OpsAssist architecture: User Request → Intent Router → Skill Selection → Toolkit Execution → Data Correlation → AI Analysis → Human Review → Approved Action. The solution uses governed skills for cross-system correlation, RCA, developer workflows, analytics, and controlled write operations. Jira, Confluence, GitHub, and ServiceNow toolkits provide enterprise data access, and human approval is required before any write operation.</p>
+<ul class="pieces" data-list="architecture.pieces"><li class="piece" data-row="architecture.pieces[0]"><p class="piece-name"><span data-edit="architecture.pieces[0].name">Intent Router</span><span class="piece-tool" data-edit="architecture.pieces[0].tool" data-empty="what it runs on">Elitea</span></p><p class="piece-role" data-edit="architecture.pieces[0].role" data-empty="what it does">Understands the user request and selects the appropriate operating mode.</p></li><li class="piece" data-row="architecture.pieces[1]"><p class="piece-name"><span data-edit="architecture.pieces[1].name">Skill Engine</span><span class="piece-tool" data-edit="architecture.pieces[1].tool" data-empty="what it runs on">Elitea Agents</span></p><p class="piece-role" data-edit="architecture.pieces[1].role" data-empty="what it does">Routes the request to the appropriate governed skill.</p></li><li class="piece" data-row="architecture.pieces[2]"><p class="piece-name"><span data-edit="architecture.pieces[2].name">Cross-Correlation Skill</span><span class="piece-tool" data-edit="architecture.pieces[2].tool" data-empty="what it runs on">AI Agent</span></p><p class="piece-role" data-edit="architecture.pieces[2].role" data-empty="what it does">Performs multi-system analysis across connected enterprise sources.</p></li><li class="piece" data-row="architecture.pieces[3]"><p class="piece-name"><span data-edit="architecture.pieces[3].name">RCA Skill</span><span class="piece-tool" data-edit="architecture.pieces[3].tool" data-empty="what it runs on">AI Agent</span></p><p class="piece-role" data-edit="architecture.pieces[3].role" data-empty="what it does">Generates root-cause analysis recommendations from available evidence.</p></li><li class="piece" data-row="architecture.pieces[4]"><p class="piece-name"><span data-edit="architecture.pieces[4].name">Developer Workflow Skill</span><span class="piece-tool" data-edit="architecture.pieces[4].tool" data-empty="what it runs on">AI Agent</span></p><p class="piece-role" data-edit="architecture.pieces[4].role" data-empty="what it does">Supports delivery and engineering workflow activities.</p></li><li class="piece" data-row="architecture.pieces[5]"><p class="piece-name"><span data-edit="architecture.pieces[5].name">Analytics Skill</span><span class="piece-tool" data-edit="architecture.pieces[5].tool" data-empty="what it runs on">AI Agent</span></p><p class="piece-role" data-edit="architecture.pieces[5].role" data-empty="what it does">Produces operational analytics, trends, and reports.</p></li><li class="piece" data-row="architecture.pieces[6]"><p class="piece-name"><span data-edit="architecture.pieces[6].name">Write Engine</span><span class="piece-tool" data-edit="architecture.pieces[6].tool" data-empty="what it runs on">AI Agent</span></p><p class="piece-role" data-edit="architecture.pieces[6].role" data-empty="what it does">Prepares controlled updates that require preview and human confirmation.</p></li><li class="piece" data-row="architecture.pieces[7]"><p class="piece-name"><span data-edit="architecture.pieces[7].name">Jira Toolkit</span><span class="piece-tool" data-edit="architecture.pieces[7].tool" data-empty="what it runs on">Jira API</span></p><p class="piece-role" data-edit="architecture.pieces[7].role" data-empty="what it does">Supports ticket and work-item integration.</p></li><li class="piece" data-row="architecture.pieces[8]"><p class="piece-name"><span data-edit="architecture.pieces[8].name">Confluence Toolkit</span><span class="piece-tool" data-edit="architecture.pieces[8].tool" data-empty="what it runs on">Confluence API</span></p><p class="piece-role" data-edit="architecture.pieces[8].role" data-empty="what it does">Supports knowledge retrieval and documentation workflows.</p></li><li class="piece" data-row="architecture.pieces[9]"><p class="piece-name"><span data-edit="architecture.pieces[9].name">GitHub Toolkit</span><span class="piece-tool" data-edit="architecture.pieces[9].tool" data-empty="what it runs on">GitHub API</span></p><p class="piece-role" data-edit="architecture.pieces[9].role" data-empty="what it does">Supports source-code and change analysis.</p></li><li class="piece" data-row="architecture.pieces[10]"><p class="piece-name"><span data-edit="architecture.pieces[10].name">ServiceNow Toolkit</span><span class="piece-tool" data-edit="architecture.pieces[10].tool" data-empty="what it runs on">ServiceNow API</span></p><p class="piece-role" data-edit="architecture.pieces[10].role" data-empty="what it does">Supports incident, problem, and operational knowledge integration.</p></li></ul>
+<div class="field field--block">
+<p class="field-label">From the EPAM AI Assets marketplace</p>
+<ul class="pieces" data-list="architecture.assets"><li class="piece" data-row="architecture.assets[0]">
+<p class="piece-name" data-edit="architecture.assets[0].name">RAAC Marketplace Assets and Elitea Frameworks</p>
+<p class="piece-role" data-edit="architecture.assets[0].use" data-empty="what you used it for">Reused Elitea platform capabilities, RAAC marketplace agents, the Unit Test Agent, Elitea frameworks, and existing approved Edward Jones AI components. These reusable assets accelerated development and remain part of the solution architecture.</p>
+</li></ul>
+</div>
+<div class="field field--block">
+<p class="field-label">What the demo showed</p>
+<p class="field-text" data-edit="architecture.demo">The demonstration showed a natural-language support request entering OpsAssist, intent classification and skill selection, retrieval and correlation of evidence from connected systems, generation of investigation or RCA guidance, human review, and explicit approval before any controlled write action.</p>
+</div>
+</div>
+</section>
+<section class="section">
+<h2 class="section-title"><span class="section-no">04</span><svg aria-hidden="true" class="icon section-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg><span class="section-name">What changed, stage by stage</span></h2>
+<div class="stages" data-list="stages"><article class="card stage" data-row="stages[0]">
+<div class="stage-head">
+<span class="stage-icon"><svg aria-hidden="true" class="icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="m16 18 6-6-6-6"></path><path d="m8 6-6 6 6 6"></path></svg></span>
+<h3 class="stage-name" data-edit="stages[0].title" data-empty="Name this stage">Operations Support and Incident Management</h3>
+<span class="stage-level">Level <span data-edit="stages[0].level" data-empty="1-3" data-num="1-3">3</span></span>
+</div>
+<p class="chip-row" data-list="stages[0].tools"><span class="tag" data-edit="stages[0].tools[0]" data-empty="Tool not chosen yet" data-row="stages[0].tools[0]">OpsAssist, Jira, ServiceNow, Confluence, GitHub</span></p>
+<p class="stage-text" data-edit="stages[0].description">A ticket, incident, or operational query triggers OpsAssist. The agent gathers and correlates cross-system evidence, produces incident context and RCA suggestions, and prepares recommended next steps. A support engineer validates the evidence and owns the final resolution, risk assessment, and production decision.</p>
+<div class="metrics" data-list="stages[0].metrics"><div class="metric" data-row="stages[0].metrics[0]">
+<p class="metric-label" data-edit="stages[0].metrics[0].label">Incident triage and RCA investigation time</p>
+<p class="metric-value"><span class="was" data-edit="stages[0].metrics[0].before">60–90 min</span><svg aria-hidden="true" class="icon icon--xs metric-arrow" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><strong data-edit="stages[0].metrics[0].after">15–30 min</strong></p>
+<p class="metric-foot"><span class="chip chip--warning" data-edit="stages[0].metrics[0].status" data-enum="metric-status"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg><span class="chip-text">Estimated</span></span></p>
+<p class="metric-note"><span class="metric-method" data-edit="stages[0].metrics[0].method">Estimated from pilot usage observations for common support scenarios; formal telemetry validation is pending.</span><span class="metric-method" data-edit="stages[0].metrics[0].period">Current pilot and initial adoption period</span></p>
+</div><div class="metric" data-row="stages[0].metrics[1]">
+<p class="metric-label" data-edit="stages[0].metrics[1].label">AI-assisted investigations and RCA activities</p>
+<p class="metric-value"><strong data-edit="stages[0].metrics[1].value">~70%</strong></p>
+<p class="metric-foot"><span class="chip chip--warning" data-edit="stages[0].metrics[1].status" data-enum="metric-status"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg><span class="chip-text">Estimated</span></span></p>
+<p class="metric-note"><span class="metric-method" data-edit="stages[0].metrics[1].method">Estimated from current OpsAssist usage patterns.</span><span data-edit="stages[0].metrics[1].note">Includes automated data retrieval, cross-system correlation, and knowledge discovery.</span></p>
+</div></div>
+</article><article class="card stage" data-row="stages[1]">
+<div class="stage-head">
+<span class="stage-icon"><svg aria-hidden="true" class="icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"></path><path d="M6.453 15h11.094"></path><path d="M8.5 2h7"></path></svg></span>
+<h3 class="stage-name" data-edit="stages[1].title" data-empty="Name this stage">Knowledge Management and Engineering Analytics</h3>
+<span class="stage-level">Level <span data-edit="stages[1].level" data-empty="1-3" data-num="1-3">3</span></span>
+</div>
+<p class="chip-row" data-list="stages[1].tools"><span class="tag tag--empty" data-edit="stages[1].tools[0]" data-empty="Tool not chosen yet" data-row="stages[1].tools[0]">OpsAssist, Confluence, GitHub, Elitea</span></p>
+<p class="stage-text" data-edit="stages[1].description">A knowledge, documentation, onboarding, or analytics request triggers the relevant OpsAssist skill. The agent retrieves enterprise content, consolidates relevant evidence, and drafts knowledge, documentation, or trend insights. An engineer reviews accuracy, removes unsupported content, and approves publication or follow-up actions.</p>
+<div class="metrics" data-list="stages[1].metrics"><div class="metric" data-row="stages[1].metrics[0]">
+<p class="metric-label" data-edit="stages[1].metrics[0].label">Hours saved per support engineer</p>
+<p class="metric-value metric-value--empty"><strong data-edit="stages[1].metrics[0].value" data-empty="Baseline open">4–6 hrs/week</strong></p>
+<p class="metric-foot"></p>
+<p class="metric-note"><span data-edit="stages[1].metrics[0].note">Estimated savings from reduced manual searching, faster knowledge retrieval, and accelerated RCA activities.</span></p>
+</div><div class="metric" data-row="stages[1].metrics[1]">
+<p class="metric-label" data-edit="stages[1].metrics[1].label">Daily active OpsAssist users</p>
+<p class="metric-value metric-value--empty"><strong data-edit="stages[1].metrics[1].value" data-empty="Planned">~15–20</strong></p>
+<p class="metric-foot"></p>
+<p class="metric-note"><span data-edit="stages[1].metrics[1].note">Estimated from current pilot adoption and usage observations across production support and engineering users.</span></p>
+</div><template data-row-shape='{"label":null,"before":null,"after":null,"status":"estimated","method":null,"period":null,"note":null}' data-row-template=""><div class="metric" data-row="stages[1].metrics[0]">
+<p class="metric-label" data-edit="stages[1].metrics[0].label" data-ph="">What you measured</p>
+<p class="metric-value"><span class="was" data-edit="stages[1].metrics[0].before" data-empty="before" data-ph="">Before</span><svg aria-hidden="true" class="icon icon--xs metric-arrow" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><strong data-edit="stages[1].metrics[0].after" data-empty="after" data-ph="">After</strong></p>
+<p class="metric-foot"><span class="chip chip--warning" data-edit="stages[1].metrics[0].status" data-enum="metric-status"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg><span class="chip-text">Estimated</span></span></p>
+<p class="metric-note"><span class="metric-method" data-edit="stages[1].metrics[0].method" data-ph="">How it was counted: Jira label, telemetry, manual count, survey</span><span data-edit="stages[1].metrics[0].period" data-empty="over what stretch" data-ph="">Over what stretch</span></p>
+</div></template></div>
+</article></div>
+</section>
+<section class="section">
+<h2 class="section-title"><span class="section-no">05</span><svg aria-hidden="true" class="icon section-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg><span class="section-name">The five programme numbers</span></h2>
+<div class="kpis"><div class="kpi">
+<p class="kpi-label">Daily active AI users</p>
+<p class="kpi-value kpi-value--empty" data-edit="keyNumbers#daily-active.value" data-empty="Not tracked">~15–20</p>
+<p class="kpi-foot"><span class="chip chip--warning" data-edit="keyNumbers#daily-active.status" data-enum="metric-status"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg><span class="chip-text">Estimated</span></span></p>
+<p class="kpi-foot" data-edit="keyNumbers#daily-active.note" data-empty="How it was counted">Estimated based on current pilot adoption and usage observations. Production support and engineering users actively use OpsAssist for incident investigation, RCA, and operational queries.</p>
+</div><div class="kpi">
+<p class="kpi-label">AI-assisted deliverables</p>
+<p class="kpi-value kpi-value--empty" data-edit="keyNumbers#ai-assisted.value" data-empty="Not tracked">~70%</p>
+<p class="kpi-foot"><span class="chip chip--warning" data-edit="keyNumbers#ai-assisted.status" data-enum="metric-status"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg><span class="chip-text">Estimated</span></span></p>
+<p class="kpi-foot" data-edit="keyNumbers#ai-assisted.note" data-empty="How it was counted">Estimated from current usage patterns. OpsAssist assists production support investigations and RCA activities through automated data retrieval, correlation, and knowledge discovery.</p>
+</div><div class="kpi">
+<p class="kpi-label">Cycle / lead time</p>
+<p class="kpi-value kpi-value--empty" data-edit="keyNumbers#cycle-time.value" data-empty="Not tracked">60–90 min → 15–30 min</p>
+<p class="kpi-foot"><span class="chip chip--warning" data-edit="keyNumbers#cycle-time.status" data-enum="metric-status"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg><span class="chip-text">Estimated</span></span></p>
+<p class="kpi-foot" data-edit="keyNumbers#cycle-time.note" data-empty="How it was counted">Estimated for common support scenarios. Cross-system evidence gathering and automated context retrieval reduce incident triage and root-cause investigation time.</p>
+</div><div class="kpi">
+<p class="kpi-label">Hours saved per person</p>
+<p class="kpi-value kpi-value--empty" data-edit="keyNumbers#hours-saved.value" data-empty="Not tracked">4–6 hrs/week</p>
+<p class="kpi-foot"><span class="chip chip--warning" data-edit="keyNumbers#hours-saved.status" data-enum="metric-status"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg><span class="chip-text">Estimated</span></span></p>
+<p class="kpi-foot" data-edit="keyNumbers#hours-saved.note" data-empty="How it was counted">Estimated per support engineer by reducing manual searches across ServiceNow, Jira, GitHub, and Confluence and accelerating RCA activities.</p>
+</div><div class="kpi">
+<p class="kpi-label">AI cost</p>
+<p class="kpi-value kpi-value--empty" data-edit="keyNumbers#token-cost.value" data-empty="Not tracked">Existing licence</p>
+<p class="kpi-foot"><span class="chip chip--warning" data-edit="keyNumbers#token-cost.status" data-enum="metric-status"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg><span class="chip-text">Estimated</span></span></p>
+<p class="kpi-foot" data-edit="keyNumbers#token-cost.note" data-empty="How it was counted">Estimated. Currently covered under existing EPAM Elitea platform licensing, with no additional project-specific AI spend being tracked. Cost measurement and ROI analysis will be part of the autonomous phase evaluation.</p>
+</div></div>
+</section>
+<section class="section">
+<h2 class="section-title"><span class="section-no">06</span><svg aria-hidden="true" class="icon section-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48"></path><path d="M15 6h1v4"></path><path d="m6.134 14.768.866-.5 2 3.464"></path><circle cx="16" cy="8" r="6"></circle></svg><span class="section-name">What it cost</span></h2>
+<div class="card grid-2">
+<div class="field">
+<p class="field-label">To build · one-off</p>
+<ul class="costs" data-list="costs.build"><li class="cost" data-row="costs.build[0]">
+<p class="cost-what" data-edit="costs.build[0].what" data-empty="Not stated">Three contributors designed, built, tested, and prepared OpsAssist over six months at an average of two hours per day.</p>
+<p class="cost-foot"><span class="cost-amount" data-edit="costs.build[0].amount" data-empty="no figure">1,080 hours · 135 person-days · 27 person-weeks</span><span class="chip chip--warning" data-edit="costs.build[0].status" data-enum="metric-status"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg><span class="chip-text">Estimated</span></span></p>
+</li><li class="cost" data-row="costs.build[1]">
+<p class="cost-what" data-edit="costs.build[1].what" data-empty="Not stated">Existing Elitea platform licences, approved AI components, and engineering resources were used.</p>
+<p class="cost-foot"><span class="cost-amount" data-edit="costs.build[1].amount" data-empty="no figure">No major incremental build spend identified</span><span class="chip chip--warning" data-edit="costs.build[1].status" data-enum="metric-status"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg><span class="chip-text">Estimated</span></span></p>
+</li></ul>
+</div>
+<div class="field">
+<p class="field-label">To run · per month</p>
+<ul class="costs" data-list="costs.run"><li class="cost" data-row="costs.run[0]">
+<p class="cost-what" data-edit="costs.run[0].what" data-empty="Not stated">Monthly OpsAssist usage includes knowledge-base search, incident investigation, RCA, knowledge retrieval, analytics, and controlled workflow operations.</p>
+<p class="cost-foot"><span class="cost-amount" data-edit="costs.run[0].amount" data-empty="no figure">Covered under existing Elitea platform licensing; detailed usage cost not yet tracked</span><span class="chip chip--warning" data-edit="costs.run[0].status" data-enum="metric-status"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg><span class="chip-text">Estimated</span></span></p>
+</li><li class="cost" data-row="costs.run[1]">
+<p class="cost-what" data-edit="costs.run[1].what" data-empty="Not stated">Human review, governance, platform support, and engineering maintenance are required to keep the solution operating safely.</p>
+<p class="cost-foot"><span class="cost-amount" data-edit="costs.run[1].amount" data-empty="no figure">Existing engineering resources; incremental effort not yet measured</span><span class="chip chip--warning" data-edit="costs.run[1].status" data-enum="metric-status"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg><span class="chip-text">Estimated</span></span></p>
+</li></ul>
+</div>
+</div>
+</section>
+<section class="section two-col">
+<div>
+<h2 class="section-title"><span class="section-no">07</span><svg aria-hidden="true" class="icon section-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3"></path><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"></path><path d="m21 3 1 11h-2"></path><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path><path d="M3 4h8"></path></svg><span class="section-name">The client</span></h2>
+<div class="card field-stack">
+<p class="chip-row"><span class="chip chip--success" data-edit="customer.shown" data-enum="shown"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg><span class="chip-text">Shown to the client</span></span></p>
+<div class="field"><p class="field-label">What they said</p><p class="field-text" data-edit="customer.reaction">OpsAssist was demonstrated to the production support and operations teams, who highlighted the value of having a single conversational interface to investigate incidents, perform root cause analysis, and retrieve information across Jira, ServiceNow, GitHub, and Confluence without switching tools. Early feedback indicated faster triage and improved access to operational knowledge.</p></div>
+<div class="field"><p class="field-label">Support to deploy and scale</p><p class="field-text" data-edit="customer.support">The production support leadership and engineering teams support continued adoption of OpsAssist. The required enterprise systems and data sources are already integrated through the Elitea platform, providing a foundation to scale the solution across additional applications and support teams.</p></div>
+</div>
+</div>
+<div>
+<h2 class="section-title"><span class="section-no">08</span><svg aria-hidden="true" class="icon section-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect height="18" rx="2" width="18" x="3" y="4"></rect><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path><path d="M16 18h.01"></path></svg><span class="section-name">The next two months</span></h2>
+<div class="card field-stack">
+<div class="field"><p class="field-label">Scaling</p><p class="field-text" data-edit="plan.scaling">Scale OpsAssist across additional production support teams and applications by onboarding more Jira projects, ServiceNow incident streams, GitHub repositories, and Confluence spaces. Expand usage from incident triage to broader operational support and engineering workflow scenarios.</p></div>
+<div class="field"><p class="field-label">Adoption by other teams</p><p class="field-text" data-edit="plan.adoption">Operations, application support, SRE, and engineering teams can adopt OpsAssist once access permissions, data-source connectivity, and governance controls are established. The platform's skill-based architecture enables reuse across multiple teams with minimal customization.</p></div>
+<div class="field"><p class="field-label">New functionality</p><p class="field-text" data-edit="plan.newFunction">Over the next two months, OpsAssist will extend beyond investigation and RCA to include automated remediation recommendations, richer analytics and trend insights, broader workflow automation, and expanded controlled write operations across Jira, Confluence, and ServiceNow using the preview-confirm-execute model.</p></div>
+</div>
+</div>
+</section>
+<section class="section two-col">
+<div>
+<h2 class="section-title"><span class="section-no">09</span><svg aria-hidden="true" class="icon section-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg><span class="section-name">Evidence and measurement</span></h2>
+<div class="card"><ul class="evidence" data-list="evidence"><li data-row="evidence[0]">
+<p class="evidence-what" data-edit="evidence[0].what">OpsAssist adoption, incident investigation improvements, time savings, AI-assisted RCA activities, and operating-cost claims.</p>
+<p class="evidence-where" data-edit="evidence[0].where">ServiceNow incident metrics, Jira records, OpsAssist and Elitea usage analytics, team observations, manual effort tracking, and incident support activities.</p>
+<p class="evidence-caveat"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span data-edit="evidence[0].caveat" data-empty="nothing weakens it">Most adoption and impact values are estimated until validated through telemetry, usage reports, or a repeatable measurement process.</span></p>
+</li></ul>
+<div class="field field--block">
+<p class="field-label">Where it lives</p>
+<ul class="links" data-list="links"><li class="link" data-row="links[0]">
+<span class="link-kind" data-edit="links[0].kind" data-empty="What this link is">Demo recording</span>
+<span class="link-url" data-edit="links[0].url" data-empty="not linked yet" data-ph="">The recording a reviewer can watch</span>
+</li><li class="link" data-row="links[1]">
+<span class="link-kind" data-edit="links[1].kind" data-empty="What this link is">Repository</span>
+<span class="link-url" data-edit="links[1].url" data-empty="not linked yet" data-ph="">github.com/...</span>
+</li><li class="link" data-row="links[2]">
+<span class="link-kind" data-edit="links[2].kind" data-empty="What this link is">Dashboard</span>
+<span class="link-url" data-edit="links[2].url" data-empty="not linked yet" data-ph="">The board or dashboard with the numbers on it</span>
+</li><li class="link" data-row="links[3]">
+<span class="link-kind" data-edit="links[3].kind" data-empty="What this link is">Evidence pack</span>
+<span class="link-url" data-edit="links[3].url" data-empty="not linked yet" data-ph="">Where the evidence in this section lives</span>
+</li><li class="link" data-row="links[4]">
+<span class="link-kind" data-edit="links[4].kind" data-empty="What this link is">LEAP record</span>
+<span class="link-url" data-edit="links[4].url" data-empty="not linked yet" data-ph="">The programme's own record of this team</span>
+</li></ul>
+</div>
+</div>
+</div>
+<div>
+<h2 class="section-title"><span class="section-no">10</span><svg aria-hidden="true" class="icon section-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><span class="section-name">What we learned</span></h2>
+<div class="card"><ol class="learnings" data-list="learnings"><li data-row="learnings[0]"><p class="learning-title"><span data-edit="learnings[0].title">Enterprise integration drives AI value</span></p><p class="learning-text" data-edit="learnings[0].text">OpsAssist delivers the most value when it can retrieve and correlate evidence across operational systems rather than operating as a standalone assistant.</p></li><li data-row="learnings[1]"><p class="learning-title"><span data-edit="learnings[1].title">Governance and human oversight remain critical</span></p><p class="learning-text" data-edit="learnings[1].text">Human review, approval, risk assessment, and production decision-making are necessary for safe use, particularly for controlled write actions.</p></li><li data-row="learnings[2]"><p class="learning-title"><span data-edit="learnings[2].title">Access and approvals can be the main delivery constraint</span></p><p class="learning-text" data-edit="learnings[2].text">Data-source connectivity, security review, development-environment access, and platform approvals may become bigger blockers than the AI implementation itself.</p></li><li data-row="learnings[3]"><p class="learning-title"><span data-edit="learnings[3].title">Reuse accelerates delivery</span></p><p class="learning-text" data-edit="learnings[3].text">Approved reusable assets, frameworks, and agents reduce implementation effort when they are adapted to project-specific workflows and governance requirements.</p></li></ol></div>
+</div>
+</section>
+<section class="section">
+<h2 class="section-title"><span class="section-no">11</span><svg aria-hidden="true" class="icon section-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg><span class="section-name">What is stuck</span></h2>
+<div class="card"><ul class="issues" data-list="issues"><li class="issue" data-row="issues[0]">
+<p class="issue-what" data-edit="issues[0].what">ServiceNow integration approval and development-instance access remain the primary blockers to broader incident intelligence, historical pattern analysis, and automated operational workflows.</p>
+<p class="issue-fix"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><span data-edit="issues[0].fix" data-empty="No way out of it yet.">Secure ServiceNow approvals, development-environment access, and the required dependency resolution with platform and administration teams.</span></p>
+<p class="issue-needs">Needs: <span data-edit="issues[0].needs" data-empty="nothing from the programme">Support from platform teams, ServiceNow administrators, and account leadership to complete approvals and environment access.</span></p>
+</li></ul></div>
+</section>
+<section class="section">
+<h2 class="section-title"><span class="section-no">12</span><svg aria-hidden="true" class="icon section-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg><span class="section-name">If you are building the same factory</span></h2>
+<div class="card card--advice"><p class="field-text" data-edit="advice">Start with a focused, high-value support use case, reuse approved assets, define human decision points, establish strong governance, and design measurable business outcomes from the beginning. Start enterprise access and approval activities early, and expand only after the workflow is reliable and evidence-backed.</p></div>
+</section>
+<section class="section">
+<h2 class="section-title"><span class="section-no">13</span><svg aria-hidden="true" class="icon section-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg><span class="section-name">Two questions from the programme</span></h2>
+<div class="card grid-2">
+<div class="qa"><p class="qa-q">Would you call this an AI Factory?</p><p class="qa-a" data-edit="programme.factory">Not fully yet, but it is evolving toward one. OpsAssist is currently a governed AI-enabled support platform. With broader ServiceNow integration, measurable outcomes, reusable marketplace publication, expanded automation, and multi-team adoption, it will represent a mature Support Engineering AI Factory.</p></div>
+<div class="qa"><p class="qa-q">How is the programme working for you?</p><p class="qa-a" data-edit="programme.feedback">The clear framework, AI coaching support, reuse mindset, and structured maturity journey are working well. Earlier clarification of AI Factory definitions, faster integration approvals, and additional guidance on measurement expectations would improve execution.</p></div>
+</div>
+</section>
+<footer class="foot">
+<p class="caveat"><svg aria-hidden="true" class="icon icon--xs" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span data-edit="source.caveat">This submission combines documented architecture, team inputs, and current pilot observations. Metrics marked Estimated require validation through telemetry, usage reports, or formal baseline measurement before being presented as measured outcomes.</span></p>
+<div class="foot-lines">
+<p>AI/Run Mission 2026 · Build your AI factory</p>
+<p>Written from one qualification meeting · 1 September 2026</p>
+</div>
+</footer>
+</main>
+<div class="nojs" id="nojs">
+<p><b>This is the document, not the editor.</b> Scripts are not running here, which is what a
+  SharePoint or Teams preview does to a file. Download it and open it from your own machine to
+  fill it in.</p>
+</div>
+<div class="tools" hidden="" id="tools">
+<span class="tool-count" id="tool-count"></span>
+<button aria-pressed="false" class="tool" id="tool-questions" type="button"><svg aria-hidden="true" class="icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg><span>Questions</span></button>
+<button aria-pressed="false" class="tool tool--white" id="tool-edit" type="button"><svg aria-hidden="true" class="icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg><span>Edit</span></button>
+<button class="tool tool--go" id="tool-save" title="Saves the submission to your computer, ready to upload to your team page on Leap." type="button"><svg aria-hidden="true" class="icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg><span>Download for Leap</span></button>
+</div>
+<aside aria-label="The questions this template asks" class="qpanel" hidden="" id="qpanel">
+<div class="qpanel-head">
+<p class="qpanel-title">What this template asks</p>
+<button aria-label="Close the questions" class="tool" id="qpanel-close" type="button"><svg aria-hidden="true" class="icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+</div>
+<div class="qpanel-body" id="qpanel-body"></div>
+</aside>
+<script id="submission-data" type="application/json">{
+  "templateVersion": 1,
+  "team": {
+    "code": "0199-EDJO-CDS",
+    "name": "OpsAssist Team",
+    "tagline": "Delivers AI-assisted L3 engineering support, production operations, incident investigation, root-cause analysis, service reliability improvements, automation, and operational excellence for Edward Jones Core Digital Services.",
+    "account": "Edward Jones (Core Digital Services - CDS)",
+    "size": "9 participants",
+    "coach": "Anusha Sivakoti",
+    "people": [
+      {
+        "name": "Pardeep Kumar",
+        "role": "Cloud Engineering Manager"
+      },
+      {
+        "name": "Hardik Parmar",
+        "role": "Lead Software Engineer"
+      },
+      {
+        "name": "Ravi Yeruva",
+        "role": "Lead System Engineer"
+      },
+      {
+        "name": "Pramod Pant",
+        "role": "Senior Software Engineer"
+      },
+      {
+        "name": "Rohit Mishra",
+        "role": "Senior Software Engineer"
+      },
+      {
+        "name": "Azael Gonzalez",
+        "role": "Lead System Engineer"
+      },
+      {
+        "name": "Gaurav Sharma",
+        "role": "Delivery Manager"
+      },
+      {
+        "name": "Ponnaga Vanimisetti",
+        "role": "Director, Delivery Management"
+      },
+      {
+        "name": "Anusha Sivakoti",
+        "role": "Project Manager"
+      }
+    ],
+    "milestone": 1,
+    "dueDate": "2026-09-15"
+  },
+  "context": {
+    "painPoint": "Before OpsAssist, support engineers spent significant time manually searching across Jira, Confluence, GitHub, ServiceNow, and knowledge repositories to gather incident context. Context switching, manual root-cause analysis, dependence on tribal knowledge, and scattered information slowed investigations, delayed onboarding, and created inconsistent support outcomes for engineers, engineering managers, and client stakeholders.",
+    "aiTools": [
+      "Elitea AI Platform",
+      "RAAC Marketplace Assets",
+      "Internal AI Agents"
+    ],
+    "baseline": "December 2026 baseline period, before OpsAssist activation."
+  },
+  "northStar": {
+    "goal": "Our North Star is to build a Support Engineering AI Factory where routine support and investigation activities become AI-assisted while governance and business-critical decisions remain human-controlled. OpsAssist will support incident triage, knowledge discovery, RCA recommendations, cross-system correlation, documentation generation, delivery analytics, and ticket preparation. Human engineers will retain final approvals, production decisions, risk assessment, change-management approvals, customer communication, escalation, and exception handling.",
+    "shiftFrom": "Engineers manually access Jira, GitHub, Confluence, and ServiceNow, perform multiple searches, correlate scattered knowledge, and conduct largely manual root-cause analysis.",
+    "shiftTo": "OpsAssist provides a single conversational interface that correlates enterprise information, generates RCA suggestions, and produces proactive analytics and recommendations while engineers focus on decisions and governance.",
+    "clientOutcome": "Faster issue resolution, reduced operational risk, improved service reliability, shorter incident-resolution cycles, and more consistent support outcomes.",
+    "currentLevel": 3,
+    "targetLevel": 4
+  },
+  "architecture": {
+    "summary": "A user request flows through the Elitea-based OpsAssist architecture: User Request → Intent Router → Skill Selection → Toolkit Execution → Data Correlation → AI Analysis → Human Review → Approved Action. The solution uses governed skills for cross-system correlation, RCA, developer workflows, analytics, and controlled write operations. Jira, Confluence, GitHub, and ServiceNow toolkits provide enterprise data access, and human approval is required before any write operation.",
+    "pieces": [
+      {
+        "name": "Intent Router",
+        "tool": "Elitea",
+        "role": "Understands the user request and selects the appropriate operating mode."
+      },
+      {
+        "name": "Skill Engine",
+        "tool": "Elitea Agents",
+        "role": "Routes the request to the appropriate governed skill."
+      },
+      {
+        "name": "Cross-Correlation Skill",
+        "tool": "AI Agent",
+        "role": "Performs multi-system analysis across connected enterprise sources."
+      },
+      {
+        "name": "RCA Skill",
+        "tool": "AI Agent",
+        "role": "Generates root-cause analysis recommendations from available evidence."
+      },
+      {
+        "name": "Developer Workflow Skill",
+        "tool": "AI Agent",
+        "role": "Supports delivery and engineering workflow activities."
+      },
+      {
+        "name": "Analytics Skill",
+        "tool": "AI Agent",
+        "role": "Produces operational analytics, trends, and reports."
+      },
+      {
+        "name": "Write Engine",
+        "tool": "AI Agent",
+        "role": "Prepares controlled updates that require preview and human confirmation."
+      },
+      {
+        "name": "Jira Toolkit",
+        "tool": "Jira API",
+        "role": "Supports ticket and work-item integration."
+      },
+      {
+        "name": "Confluence Toolkit",
+        "tool": "Confluence API",
+        "role": "Supports knowledge retrieval and documentation workflows."
+      },
+      {
+        "name": "GitHub Toolkit",
+        "tool": "GitHub API",
+        "role": "Supports source-code and change analysis."
+      },
+      {
+        "name": "ServiceNow Toolkit",
+        "tool": "ServiceNow API",
+        "role": "Supports incident, problem, and operational knowledge integration."
+      }
+    ],
+    "assets": [
+      {
+        "name": "RAAC Marketplace Assets and Elitea Frameworks",
+        "use": "Reused Elitea platform capabilities, RAAC marketplace agents, the Unit Test Agent, Elitea frameworks, and existing approved Edward Jones AI components. These reusable assets accelerated development and remain part of the solution architecture."
+      }
+    ],
+    "demo": "The demonstration showed a natural-language support request entering OpsAssist, intent classification and skill selection, retrieval and correlation of evidence from connected systems, generation of investigation or RCA guidance, human review, and explicit approval before any controlled write action."
+  },
+  "stages": [
+    {
+      "stage": "operations-support",
+      "title": "Operations Support and Incident Management",
+      "level": 3,
+      "tools": [
+        "OpsAssist, Jira, ServiceNow, Confluence, GitHub"
+      ],
+      "description": "A ticket, incident, or operational query triggers OpsAssist. The agent gathers and correlates cross-system evidence, produces incident context and RCA suggestions, and prepares recommended next steps. A support engineer validates the evidence and owns the final resolution, risk assessment, and production decision.",
+      "metrics": [
+        {
+          "label": "Incident triage and RCA investigation time",
+          "status": "estimated",
+          "before": "60–90 min",
+          "after": "15–30 min",
+          "method": "Estimated from pilot usage observations for common support scenarios; formal telemetry validation is pending.",
+          "period": "Current pilot and initial adoption period"
+        },
+        {
+          "label": "AI-assisted investigations and RCA activities",
+          "status": "estimated",
+          "value": "~70%",
+          "method": "Estimated from current OpsAssist usage patterns.",
+          "note": "Includes automated data retrieval, cross-system correlation, and knowledge discovery."
+        }
+      ]
+    },
+    {
+      "stage": "knowledge-management",
+      "title": "Knowledge Management and Engineering Analytics",
+      "level": 3,
+      "tools": [
+        "OpsAssist, Confluence, GitHub, Elitea"
+      ],
+      "description": "A knowledge, documentation, onboarding, or analytics request triggers the relevant OpsAssist skill. The agent retrieves enterprise content, consolidates relevant evidence, and drafts knowledge, documentation, or trend insights. An engineer reviews accuracy, removes unsupported content, and approves publication or follow-up actions.",
+      "metrics": [
+        {
+          "label": "Hours saved per support engineer",
+          "status": "estimated",
+          "value": "4–6 hrs/week",
+          "note": "Estimated savings from reduced manual searching, faster knowledge retrieval, and accelerated RCA activities."
+        },
+        {
+          "label": "Daily active OpsAssist users",
+          "status": "estimated",
+          "value": "~15–20",
+          "note": "Estimated from current pilot adoption and usage observations across production support and engineering users."
+        }
+      ]
+    }
+  ],
+  "keyNumbers": [
+    {
+      "id": "daily-active",
+      "status": "estimated",
+      "note": "Estimated based on current pilot adoption and usage observations. Production support and engineering users actively use OpsAssist for incident investigation, RCA, and operational queries.",
+      "value": "~15–20"
+    },
+    {
+      "id": "ai-assisted",
+      "status": "estimated",
+      "note": "Estimated from current usage patterns. OpsAssist assists production support investigations and RCA activities through automated data retrieval, correlation, and knowledge discovery.",
+      "value": "~70%"
+    },
+    {
+      "id": "cycle-time",
+      "status": "estimated",
+      "note": "Estimated for common support scenarios. Cross-system evidence gathering and automated context retrieval reduce incident triage and root-cause investigation time.",
+      "value": "60–90 min → 15–30 min"
+    },
+    {
+      "id": "hours-saved",
+      "status": "estimated",
+      "note": "Estimated per support engineer by reducing manual searches across ServiceNow, Jira, GitHub, and Confluence and accelerating RCA activities.",
+      "value": "4–6 hrs/week"
+    },
+    {
+      "id": "token-cost",
+      "status": "estimated",
+      "note": "Estimated. Currently covered under existing EPAM Elitea platform licensing, with no additional project-specific AI spend being tracked. Cost measurement and ROI analysis will be part of the autonomous phase evaluation.",
+      "value": "Existing licence"
+    }
+  ],
+  "costs": {
+    "build": [
+      {
+        "what": "Three contributors designed, built, tested, and prepared OpsAssist over six months at an average of two hours per day.",
+        "amount": "1,080 hours · 135 person-days · 27 person-weeks",
+        "status": "estimated"
+      },
+      {
+        "what": "Existing Elitea platform licences, approved AI components, and engineering resources were used.",
+        "amount": "No major incremental build spend identified",
+        "status": "estimated"
+      }
+    ],
+    "run": [
+      {
+        "what": "Monthly OpsAssist usage includes knowledge-base search, incident investigation, RCA, knowledge retrieval, analytics, and controlled workflow operations.",
+        "amount": "Covered under existing Elitea platform licensing; detailed usage cost not yet tracked",
+        "status": "estimated"
+      },
+      {
+        "what": "Human review, governance, platform support, and engineering maintenance are required to keep the solution operating safely.",
+        "amount": "Existing engineering resources; incremental effort not yet measured",
+        "status": "estimated"
+      }
+    ]
+  },
+  "plan": {
+    "scaling": "Scale OpsAssist across additional production support teams and applications by onboarding more Jira projects, ServiceNow incident streams, GitHub repositories, and Confluence spaces. Expand usage from incident triage to broader operational support and engineering workflow scenarios.",
+    "adoption": "Operations, application support, SRE, and engineering teams can adopt OpsAssist once access permissions, data-source connectivity, and governance controls are established. The platform's skill-based architecture enables reuse across multiple teams with minimal customization.",
+    "newFunction": "Over the next two months, OpsAssist will extend beyond investigation and RCA to include automated remediation recommendations, richer analytics and trend insights, broader workflow automation, and expanded controlled write operations across Jira, Confluence, and ServiceNow using the preview-confirm-execute model."
+  },
+  "issues": [
+    {
+      "what": "ServiceNow integration approval and development-instance access remain the primary blockers to broader incident intelligence, historical pattern analysis, and automated operational workflows.",
+      "fix": "Secure ServiceNow approvals, development-environment access, and the required dependency resolution with platform and administration teams.",
+      "needs": "Support from platform teams, ServiceNow administrators, and account leadership to complete approvals and environment access."
+    }
+  ],
+  "customer": {
+    "shown": "yes",
+    "reaction": "OpsAssist was demonstrated to the production support and operations teams, who highlighted the value of having a single conversational interface to investigate incidents, perform root cause analysis, and retrieve information across Jira, ServiceNow, GitHub, and Confluence without switching tools. Early feedback indicated faster triage and improved access to operational knowledge.",
+    "support": "The production support leadership and engineering teams support continued adoption of OpsAssist. The required enterprise systems and data sources are already integrated through the Elitea platform, providing a foundation to scale the solution across additional applications and support teams."
+  },
+  "programme": {
+    "factory": "Not fully yet, but it is evolving toward one. OpsAssist is currently a governed AI-enabled support platform. With broader ServiceNow integration, measurable outcomes, reusable marketplace publication, expanded automation, and multi-team adoption, it will represent a mature Support Engineering AI Factory.",
+    "feedback": "The clear framework, AI coaching support, reuse mindset, and structured maturity journey are working well. Earlier clarification of AI Factory definitions, faster integration approvals, and additional guidance on measurement expectations would improve execution."
+  },
+  "evidence": [
+    {
+      "what": "OpsAssist adoption, incident investigation improvements, time savings, AI-assisted RCA activities, and operating-cost claims.",
+      "where": "ServiceNow incident metrics, Jira records, OpsAssist and Elitea usage analytics, team observations, manual effort tracking, and incident support activities.",
+      "caveat": "Most adoption and impact values are estimated until validated through telemetry, usage reports, or a repeatable measurement process."
+    }
+  ],
+  "learnings": [
+    {
+      "title": "Enterprise integration drives AI value",
+      "text": "OpsAssist delivers the most value when it can retrieve and correlate evidence across operational systems rather than operating as a standalone assistant."
+    },
+    {
+      "title": "Governance and human oversight remain critical",
+      "text": "Human review, approval, risk assessment, and production decision-making are necessary for safe use, particularly for controlled write actions."
+    },
+    {
+      "title": "Access and approvals can be the main delivery constraint",
+      "text": "Data-source connectivity, security review, development-environment access, and platform approvals may become bigger blockers than the AI implementation itself."
+    },
+    {
+      "title": "Reuse accelerates delivery",
+      "text": "Approved reusable assets, frameworks, and agents reduce implementation effort when they are adapted to project-specific workflows and governance requirements."
+    }
+  ],
+  "advice": "Start with a focused, high-value support use case, reuse approved assets, define human decision points, establish strong governance, and design measurable business outcomes from the beginning. Start enterprise access and approval activities early, and expand only after the workflow is reliable and evidence-backed.",
+  "links": [
+    {
+      "kind": "Demo recording",
+      "url": null
+    },
+    {
+      "kind": "Repository",
+      "url": null
+    },
+    {
+      "kind": "Dashboard",
+      "url": null
+    },
+    {
+      "kind": "Evidence pack",
+      "url": null
+    },
+    {
+      "kind": "LEAP record",
+      "url": null
+    }
+  ],
+  "source": {
+    "kind": "meeting",
+    "date": "2026-09-01",
+    "participants": [
+      "Pardeep Kumar",
+      "Hardik Parmar",
+      "Ravi Yeruva",
+      "Pramod Pant",
+      "Rohit Mishra",
+      "Azael Gonzalez",
+      "Gaurav Sharma",
+      "Ponnaga Vanimisetti",
+      "Anusha Sivakoti"
+    ],
+    "caveat": "This submission combines documented architecture, team inputs, and current pilot observations. Metrics marked Estimated require validation through telemetry, usage reports, or formal baseline measurement before being presented as measured outcomes."
+  }
+}</script>
+<script>
+(function(){
+  var root=document.documentElement, key="milestone-theme";
+  try{ var saved=localStorage.getItem(key); if(saved) root.setAttribute("data-theme",saved); }catch(e){}
+  /* Delegated rather than bound: the editor below can replace the whole document with a restored
+   * draft, and a listener held on one button would go with it. */
+  document.addEventListener("click",function(ev){
+    if(!ev.target||!ev.target.closest||!ev.target.closest("#theme-toggle")) return;
+    var dark=getComputedStyle(root).colorScheme==="dark"||root.getAttribute("data-theme")==="dark";
+    if(!root.getAttribute("data-theme")){
+      dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    var next=dark?"light":"dark";
+    root.setAttribute("data-theme",next);
+    try{ localStorage.setItem(key,next); }catch(e){}
+  });
+})();
+</script>
+<script>
+(function(){
+"use strict";
+var ROOT=document.documentElement;
+/* SAID BEFORE ANYTHING ELSE IS TRIED. Marking the page rather than deleting the bar keeps the
+ * fallback in the document, so the file this page saves carries it too and says the same thing to
+ * the next person who opens it somewhere that will not run it. */
+ROOT.setAttribute("data-js","");
+
+/* ── The draft, so that a reload is not a loss ──────────────────────────────────────
+ * This page has always been a file and nothing else: the only way out was Save HTML, and a reload -
+ * or a browser that decided to reload - took everything typed with it. A team fills this in one
+ * sitting, on a call, and losing twenty minutes of that to a stray Cmd-R is not something to warn
+ * about, it is something to prevent. The whole document is written to localStorage after every
+ * change and put back when the page is opened again. The downloaded file is still the deliverable;
+ * this is the net under it.
+ *
+ * KEYED TO THE DOCUMENT IT CAME FROM. On file:// every page shares one localStorage, so the
+ * template and a team's saved submission would otherwise overwrite each other's drafts. */
+/* WHAT THE DRAFT WAS WRITTEN AGAINST, WORKED OUT RATHER THAN REMEMBERED. A draft is the whole
+ * document, so putting one back puts back its stylesheet, its toolbar and its sections as well:
+ * every improvement to this template was invisible to anybody holding one, and the page they read
+ * was the page an older file had drawn. A version string here would only work while whoever edits
+ * the file remembers to bump it, and nobody does. So the shape of the document is measured on both
+ * sides instead - the length of its stylesheet and its script, the set of fields it offers, and
+ * the structure of the toolbar. TEXT IS NOT IN IT: typing an answer, adding a person or deleting a
+ * stage leaves the shape untouched, which is exactly the draft we do want back. Editing the
+ * template changes it, and that draft steps aside - it is left in the store, unread, until the
+ * first edit here overwrites it. */
+function shape(doc){
+  var out=[], seen={}, i, n=0;
+  var styles=doc.getElementsByTagName("style"); for(i=0;i<styles.length;i++) n+=styles[i].textContent.length;
+  out.push("css:"+n); n=0;
+  var scripts=doc.getElementsByTagName("script");
+  for(i=0;i<scripts.length;i++) if(!scripts[i].type||scripts[i].type.indexOf("json")<0) n+=scripts[i].textContent.length;
+  out.push("js:"+n);
+  var slots=doc.querySelectorAll("[data-edit]"), k;
+  for(i=0;i<slots.length;i++){
+    k=String(slots[i].getAttribute("data-edit")).replace(/\[\d+\]/g,"");
+    if(!seen[k]){ seen[k]=1; out.push(k); }
+  }
+  var lists=doc.querySelectorAll("[data-list]");
+  for(i=0;i<lists.length;i++){
+    k="list:"+String(lists[i].getAttribute("data-list")).replace(/\[\d+\]/g,"");
+    if(!seen[k]){ seen[k]=1; out.push(k); }
+  }
+  var bar=doc.getElementById("tools");
+  out.push("bar:"+(bar?bar.innerHTML.replace(/>[^<]*</g,"><").length:0));
+  return out.sort().join("|");
+}
+var DRAFT="milestone-draft:"+location.pathname, restoredAt=0;
+try{
+  var keep=JSON.parse(localStorage.getItem(DRAFT)||"null");
+  if(keep&&typeof keep.doc==="string"&&/<html[\s>]/i.test(keep.doc)){
+    var mine=shape(document), theirs=null;
+    try{ theirs=shape(new DOMParser().parseFromString(keep.doc,"text/html")); }catch(e){}
+    if(theirs===mine){
+      /* Only the contents: the attributes on <html> carry the theme this reader has chosen, which
+       * belongs to this visit and not to the draft. Scripts inserted this way never run, which is
+       * exactly right - the editor is already running, and the lines below bind to what it finds. */
+      ROOT.innerHTML=keep.doc.replace(/^[\s\S]*?<html[^>]*>/i,"").replace(/<\/html>[\s\S]*$/i,"");
+      restoredAt=Number(keep.at)||0;
+    }
+  }
+}catch(e){}
+
+var ISLAND=document.getElementById("submission-data");
+if(!ISLAND) return;
+var DATA; try{ DATA=JSON.parse(ISLAND.textContent); }catch(e){ return; }
+var ENUMS={"metric-status":[["measured","Measured","success"],["estimated","Estimated","warning"],["qualitative","In place","info"],["baseline","Baseline open","muted"],["untracked","Not tracked","muted"],["planned","Planned","muted"]],"shown":[["yes","Shown to the client","success"],["partly","Shown in part","warning"],["no","Not shown yet","muted"]]}, KPIS=[{"id":"daily-active","label":"Daily active AI users"},{"id":"ai-assisted","label":"AI-assisted deliverables"},{"id":"cycle-time","label":"Cycle / lead time"},{"id":"hours-saved","label":"Hours saved per person"},{"id":"token-cost","label":"AI cost"}], QUESTIONS={"team.name":"Team name as the client and the programme know it.","team.code":"Programme team code, e.g. 0034-LSEG-L3SE. Null when the team does not know it, and then it is not printed.","team.tagline":"One sentence: what this team delivers for the client.","team.account":"Account or client name, if it may be named.","team.coach":"The AI coach working with this team.","team.size":"Team size as a phrase.","team.people.name":"The person's name, as the project writes it.","team.people.role":"Their role, as the project names it: Business analyst, Backend engineer, QA. The role, not what they worked on. Leave it out rather than guess.","context.painPoint":"The biggest delivery pain before this programme, in one or two sentences. Concrete: what took too long, what kept breaking, what the client complained about.","context.aiTools":"What AI tooling the project actually has access to, licences and platforms.","context.baseline":"The period the after-numbers are compared against.","northStar.goal":"The target state in three or four sentences: which SDLC stages become agentic, what humans keep governing.","northStar.currentLevel":"AI maturity level the team is at TODAY. A target reads as a step or as the whole programme depending on this one, so it is worth asking for.","northStar.targetLevel":"AI maturity level targeted by the end of the programme.","northStar.shiftFrom":"How the work is done today, in one sentence.","northStar.shiftTo":"How it is done once the factory is in place, in one sentence.","northStar.clientOutcome":"The client business outcome this is connected to. Money, risk or speed, not adoption.","architecture.summary":"How it is built, in one paragraph: what the pieces are, what triggers what, where the AI sits and where a human does. Name the platform each piece runs on.","architecture.pieces.name":"What the piece is called.","architecture.pieces.tool":"What it runs on.","architecture.pieces.role":"What it does, in a few words.","architecture.assets.name":"The asset as the marketplace names it.","architecture.assets.use":"What you used it for, and whether it survived contact with the project.","architecture.demo":"What the demo showed, step by step, in the order it was shown. This is the sentence a reviewer reads when they cannot open the recording, so write the RUN, not the feature list.","stages.title":"Overrides the stage label when the team calls it something of its own.","stages.level":"AI maturity level this stage has actually reached, 1 to 3. What is running today, not what is planned. Leave it out rather than claim one.","stages.tools":"The tools doing the work.","stages.description":"One paragraph: what triggers the agent, what it does, what a human reviews or decides. Write the workflow, not the tool's marketing.","stages.metrics.label":"What is being measured.","stages.metrics.before":"The baseline value with its unit.","stages.metrics.after":"The current value with its unit.","stages.metrics.status":"How true this number is. `measured` needs before, after, period and method. Never dress an estimate as a measurement.","stages.metrics.method":"How it was counted: Jira label, telemetry, manual count, survey. A reviewer will ask.","stages.metrics.period":"Over what stretch it was measured.","stages.metrics.value":"A single value, when there is no before and after.","stages.metrics.note":"One line of context, including why a number is missing.","keyNumbers#daily-active.status":"How true this number is. A `measured` one needs a method and a period behind it, and `untracked` is an answer - a better one than a figure nobody can defend.","keyNumbers#ai-assisted.status":"How true this number is.","keyNumbers#cycle-time.status":"How true this number is.","keyNumbers#hours-saved.status":"How true this number is.","keyNumbers#token-cost.status":"How true this number is.","keyNumbers#daily-active.value":"Share of team members using AI tools daily, and how that was measured.","keyNumbers#daily-active.note":"How the daily-active share was counted: a licence report, a telemetry query, a show of hands. Or why it is not tracked.","keyNumbers#ai-assisted.value":"Share of core deliverables (stories, PRs, test cases) meaningfully AI-assisted this reporting period.","keyNumbers#ai-assisted.note":"How the AI-assisted share was counted: a Jira label, a PR tag, a manual count. Or why it is not tracked.","keyNumbers#cycle-time.value":"Change in cycle or lead time against the baseline period. Negative is faster.","keyNumbers#cycle-time.note":"How cycle or lead time was counted, and over which period. Or why it is not tracked.","keyNumbers#hours-saved.value":"Engineering hours saved per person per week, and how that was arrived at.","keyNumbers#hours-saved.note":"How the hours saved were arrived at: a survey, a timing exercise, an estimate said to be one. Or why it is not tracked.","keyNumbers#token-cost.value":"AI token or tool cost per month. Required for a Level 3 claim.","keyNumbers#token-cost.note":"Where the AI cost figure comes from: the platform's own billing, an account estimate. Required for a Level 3 claim.","costs.build.what":"One kind of cost that went into building it: people, licences, money. One line each — add a line for every kind you have, delete the ones you do not.","costs.build.amount":"The figure, in whatever unit you hold it: 6 people-weeks, £4k, nothing extra. Leave it empty rather than invent one — the line still counts.","costs.build.status":"How true this figure is. An estimate said to be an estimate is worth more than a number nobody can defend.","costs.run.what":"What it takes to keep it running, per month — the part the AI cost tile cannot hold: a cost that moves with volume, a raise requested, review time somebody pays for. Delete every line here if the tile above is the whole answer.","costs.run.amount":"The figure, per month. Empty is an answer too.","costs.run.status":"How true this figure is.","customer.shown":"Have you shown the solution to the client. `partly` for a demo to one person or one part of it.","customer.reaction":"What they said. Their words where you have them, not your reading of them.","customer.support":"Whether you have the support you need to deploy, use or scale it — and from whom. Say so plainly when you do not.","plan.scaling":"What gets scaled, and along which axis: more of the same work, more of the pipeline, more environments.","plan.adoption":"Which other teams take this up, and what has to be true before they can. Name them if you know them.","plan.newFunction":"What the factory will do in two months that it cannot do today.","evidence.what":"The claim this backs.","evidence.where":"The system it lives in.","evidence.caveat":"What weakens it. Say it here rather than let a reviewer find it.","links.kind":"What this link is: the demo recording, the repository, the dashboard a reviewer opens.","links.url":"The address itself. A reviewer will click it, so it has to be one they can reach - and a page nobody outside the team can open is worth saying so about.","learnings.title":"The learning in one line, as a finding rather than a topic.","learnings.text":"One short paragraph: what happened, and what you concluded from it.","issues.what":"What is stuck, in one or two sentences.","issues.fix":"How it gets unblocked, if the team knows. Leave it out rather than invent one: \"we do not know yet\" is the answer the programme is asking for.","issues.needs":"What you need from the programme or the account to move it.","advice":"What you would tell another team building the same factory to do differently. One paragraph.","programme.factory":"Would you call what you have built an AI Factory? One line. A straight \"not yet, because...\" is a better answer than a yes, and the programme reads it that way.","programme.feedback":"How is the programme working for you? One line. Say the part that is not working: this is the only channel the programme has for it.","source.caveat":"The honest limit of this submission, e.g. tested across 4 reporting periods on one sub-stream."};
+var askedAt=function(path){ return QUESTIONS[String(path).replace(/\[\d+\]/g,"")]||""; };
+var isString=(v) => typeof v === "string" && v.trim() !== "";
+var completeness=function completeness(data, blank) {
+  var no = blank || PLACEHOLDERS;
+  var isString = function (v) { return typeof v === "string" && v.trim() !== "" && !no.has(v.trim()); };
+  const missing = [];
+  const seen = (ok, id, label) => { if (!ok) missing.push({ id, label }); return ok ? 1 : 0; };
+  let have = 0, total = 0;
+  const count = (ok, id, label) => { total += 1; have += seen(ok, id, label); };
+
+  count(isString(data?.team?.tagline), "team.tagline", "What the team delivers for the client");
+  count(isString(data?.context?.painPoint), "context.painPoint", "The delivery pain you started from");
+  count((data?.context?.aiTools ?? []).some(isString), "context.aiTools", "The AI tooling the project has");
+  count(isString(data?.context?.baseline), "context.baseline", "The baseline period to compare against");
+  count(isString(data?.northStar?.goal), "northStar.goal", "The target state of the factory");
+  count(isString(data?.northStar?.clientOutcome), "northStar.clientOutcome", "The client business outcome");
+  count(!!data?.northStar?.currentLevel, "northStar.currentLevel", "The maturity level today");
+  count(!!data?.northStar?.targetLevel, "northStar.targetLevel", "The maturity level targeted");
+  /* DESCRIBED, not merely present. The template ships two stage cards so that a team can see the
+   * shape of one, and counting those as two stages described made a blank template report work
+   * nobody had done. The same for a measurement: `measured` with the template's own "3 h" in it is
+   * a demonstration of the field, not a number. */
+  count((data?.stages ?? []).filter((s) => isString(s?.description)).length >= 2, "stages", "At least two SDLC stages described");
+  count((data?.stages ?? []).some((s) => (s.metrics ?? []).some((m) => m.status === "measured" && isString(m.before) && isString(m.after))), "stages.measured", "At least one measured before and after");
+  count((data?.stages ?? []).length > 0 && (data?.stages ?? []).every((s) => !!s.level),
+    "stages.level", "A maturity level on every stage");
+  for (const kpi of KPIS) {
+    const k = (data?.keyNumbers ?? []).find((x) => x.id === kpi.id);
+    count(isString(k?.value), `keyNumbers.${kpi.id}`, kpi.label);
+  }
+  /* The ten things the programme's own brief asks a team to cover on the call (Evgenii, 30.08).
+   * Six of them had nowhere to go in this template and so were never missing from it either —
+   * which is the worse failure: a checklist that cannot report the gap it does not know about.
+   *
+   * `assets` and `issues` count an EMPTY ARRAY as answered on purpose. "We looked at the
+   * marketplace and used nothing" and "nothing is stuck" are answers; the absent field is not. */
+  count(isString(data?.architecture?.summary), "architecture.summary", "How the solution is built");
+  count(isString(data?.architecture?.demo), "architecture.demo", "What the demo showed");
+  count(Array.isArray(data?.architecture?.assets), "architecture.assets", "Reuse from the EPAM AI Assets marketplace");
+  /* A cost is a list of lines now. A sentence still counts, because a draft written against an
+   * older template has one there, and a team that answered the question should not read itself
+   * as having skipped it. A line counts on either half: "two engineers, two reporting periods" is an
+   * answer with no figure, and so is "£4k" with no sentence. */
+  var costed = function (v) {
+    return Array.isArray(v)
+      ? v.some(function (l) { return isString(l && l.what) || isString(l && l.amount); })
+      : isString(v);
+  };
+  count(costed(data?.costs?.build), "costs.build", "What building it cost");
+  count(["scaling", "adoption", "newFunction"].every((k) => isString(data?.plan?.[k])),
+    "plan", "Scaling, adoption and new functionality for the next two months");
+  count(Array.isArray(data?.issues), "issues", "What is stuck");
+  count(!!data?.customer?.shown, "customer.shown", "Whether the client has seen it");
+  count(isString(data?.customer?.support), "customer.support", "Support to deploy and scale");
+  count(isString(data?.programme?.factory), "programme.factory", "Whether the team calls this an AI Factory");
+  count(isString(data?.programme?.feedback), "programme.feedback", "How the programme is working for the team");
+  count((data?.evidence ?? []).length >= 1, "evidence", "Where the evidence lives");
+  count((data?.learnings ?? []).length >= 3, "learnings", "Three learnings or more");
+  count((data?.links ?? []).some((l) => isString(l.url)), "links", "At least one artifact linked");
+  count(isString(data?.advice), "advice", "What you would tell another team");
+  count(isString(data?.source?.caveat), "source.caveat", "The honest limit of the claim");
+
+  return { have, total, share: total ? have / total : 0, missing };
+};
+/* The strings that mean "nothing here yet", read off the page rather than shipped with it: every
+ * untouched slot is marked, so the set shrinks as the template is filled and costs no bytes. */
+function blanks(){
+  var out=new Set();
+  Array.prototype.forEach.call(document.querySelectorAll("[data-ph]"),function(el){ out.add(textOf(el).trim()); });
+  return out;
+}
+var dirty=false;
+
+/* ── Reaching a field by the path its slot names ────────────────────────────────────
+ * Three shapes, and the third is the one worth naming: keyNumbers#daily-active.value addresses the
+ * five programme numbers BY ID rather than by position, because a team may send them in any order
+ * and a slot that wrote to index 2 would silently land on the neighbouring KPI. */
+function reach(path, make){
+  var parts=String(path).split("."), obj=DATA, i;
+  for(i=0;i<parts.length;i++){
+    var key=parts[i], idx=null, hash=key.indexOf("#"), m=key.match(/^(.*)\[(\d+)\]$/);
+    if(hash>0){
+      var arr=obj[key.slice(0,hash)]; if(!arr) return null;
+      var id=key.slice(hash+1), row=null, j;
+      for(j=0;j<arr.length;j++) if(arr[j] && arr[j].id===id) row=arr[j];
+      if(!row){ if(!make) return null; row={id:id}; arr.push(row); }
+      obj=row; continue;
+    }
+    if(m){ key=m[1]; idx=Number(m[2]); }
+    if(i===parts.length-1 && idx===null) return {on:obj,key:key};
+    var next=obj[key];
+    if(next==null){ if(!make) return null; next=(idx===null?{}:[]); obj[key]=next; }
+    if(idx!==null){
+      if(i===parts.length-1) return {on:next,key:idx};
+      if(next[idx]==null){ if(!make) return null; next[idx]={}; }
+      obj=next[idx];
+    } else obj=next;
+  }
+  return null;
+}
+function get(path){ var r=reach(path,false); return r?r.on[r.key]:undefined; }
+function set(path,value){ var r=reach(path,true); if(r) r.on[r.key]=value; }
+
+var slots=function(){ return Array.prototype.slice.call(document.querySelectorAll("[data-edit]")); };
+/* The field a slot addresses, with the row it happens to sit in taken out of the path: people[3].role
+ * and people[0].role are the same question asked twice. */
+function slotKey(el){ return String(el.getAttribute("data-edit")||"").replace(/\[\d+\]/g,""); }
+function editSlots(el){
+  var out=(el.nodeType===1&&el.hasAttribute("data-edit"))?[el]:[];
+  return out.concat(Array.prototype.slice.call(el.querySelectorAll("[data-edit]")));
+}
+/* EVERY PROMPT THE PAGE SHIPS, read off the page itself and kept by field. A row added with "+ Add"
+ * used to arrive as a run of blank boxes saying nothing about what belongs in them; it borrows these
+ * instead and wears them exactly as the shipped row does - grey, not counted as answered, and gone
+ * on the first keystroke. Read from the stored row templates first, because those are pristine even
+ * on a page restored from a draft where the visible rows have already been typed into. */
+var PROMPTS={};
+function capturePrompts(){
+  var add=function(el){
+    if(!el.hasAttribute("data-ph")) return;
+    var k=slotKey(el); if(!(k in PROMPTS)) PROMPTS[k]=el.textContent;
+  };
+  Array.prototype.forEach.call(document.querySelectorAll("template[data-row-template]"),function(t){
+    var root=t.content.firstElementChild; if(root) editSlots(root).forEach(add);
+  });
+  slots().forEach(add);
+}
+/* THE VALUE OF A SLOT IS NOT ITS textContent. A row that is its own slot - a tool chip - carries
+ * its delete button INSIDE the editable element, so textContent reads "Copilot\u00d7" and that is what
+ * used to be saved. The glyph is drawn by CSS now, but a file saved by an older version still has
+ * the character in it, so the button is skipped here rather than merely emptied. */
+function textOf(el){
+  var s="",i,n;
+  for(i=0;i<el.childNodes.length;i++){
+    n=el.childNodes[i];
+    if(n.nodeType===1&&n.classList&&n.classList.contains("row-del")) continue;
+    s+=n.textContent;
+  }
+  return s;
+}
+var answered=function(el){ return !el.hasAttribute("data-ph") && textOf(el).trim()!==""; };
+
+/* ── The three drawings an edit can invalidate ──────────────────────────────────────
+ * The page carries no renderer, on purpose. These are the only places where a value is drawn as
+ * something other than its own text, so these are the only places that have to be redrawn. */
+function redrawLevels(){
+  var now=Number(get("northStar.currentLevel"))||0, target=Number(get("northStar.targetLevel"))||0;
+  var fill=document.querySelector(".meter-fill"), mark=document.querySelector(".meter-target");
+  if(fill) fill.style.width=(now/3*100)+"%";
+  if(mark) mark.style.left=(target/3*100)+"%";
+  /* THE BIG NUMBER IS A DRAWING OF THE LEVEL TOO, and it was written into the page once and never
+   * again: a team that set itself to Level 2 watched the bar move to two thirds and kept reading
+   * "1/3" directly above it. The screen reader was told the old number as well. */
+  var score=document.querySelector(".level-score");
+  if(score&&score.firstChild&&score.firstChild.nodeType===3) score.firstChild.nodeValue=String(now);
+  /* AND THE SECOND NUMBER IS THE TARGET, not the top of the scale. It read "1/3" while the scale
+   * happened to end at 3 too, so a team that moved its target to 2 watched the mark on the bar
+   * slide and the headline above it stay where it was - the one number they had just changed. The
+   * scale is still on the page: the meter is ticked 0 to 3 under it. */
+  var of=score&&score.querySelector(".level-of");
+  if(of) of.textContent=target?" \u2192 "+String(target):"";
+  var meter=document.querySelector(".meter[role=meter]");
+  if(meter){
+    meter.setAttribute("aria-valuenow",String(now));
+    meter.setAttribute("aria-label","AI maturity "+now+" of 3, target "+target);
+  }
+}
+function redrawReadiness(){
+  var c=completeness(DATA, blanks()), pct=Math.round(c.share*100);
+  var box=document.querySelector(".readiness"); if(!box) return c;
+  var bar=box.querySelector(".readiness-bar span"); if(bar) bar.style.width=pct+"%";
+  var text=box.querySelector(".readiness-text"); if(!text) return c;
+  var open=c.missing.length
+    ? "Still open: "+c.missing.slice(0,6).map(function(m){return m.label.toLowerCase();}).join(", ")+(c.missing.length>6?", and "+(c.missing.length-6)+" more":"")+"."
+    : "Nothing is outstanding.";
+  text.innerHTML="";
+  var b=document.createElement("strong"); b.textContent=c.have+" of "+c.total;
+  text.appendChild(b);
+  text.appendChild(document.createTextNode(" facts in this template are backed by a number or a source. "+open));
+  return c;
+}
+/* ONE SCORE ON THE PAGE. The bar used to count filled SLOTS while the readiness line counted
+ * BACKED FACTS, so a team filling the template read two different numbers about itself and had to
+ * work out which one the programme uses. It is this one, so it is the one on the bar; the panel
+ * keeps the per-section counts, which are about how much typing is left rather than about how the
+ * submission reads. */
+function sync(){
+  var c=redrawReadiness();
+  var n=document.getElementById("tool-count");
+  if(n&&c) n.textContent=c.have+" of "+c.total+" answered";
+  paintQuestions();
+  if(dirty) scheduleDraft();          // never on the first draw: an untouched page is not a draft
+}
+
+/* ── Typing ─────────────────────────────────────────────────────────────────────────
+ * A slot still holding the template's own sentence is selected whole on first focus, so the first
+ * keystroke replaces the instruction rather than growing it. That is the one interaction a person
+ * filling this page does forty times, and getting it wrong makes the template unusable by hand. */
+function onFocus(e){
+  var el=e.target.closest && e.target.closest("[data-edit]"); if(!el) return;
+  if(!el.hasAttribute("data-ph")) return;
+  var r=document.createRange(); r.selectNodeContents(el);
+  /* Up to the delete button, never over it: selecting the whole node and typing used to delete a
+   * chip's own \u00d7 with the first keystroke, and nothing put it back until edit mode was toggled. */
+  var del=el.querySelector(":scope > .row-del");
+  if(del) r.setEndBefore(del);
+  var sel=window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+}
+function onInput(e){
+  var el=e.target.closest && e.target.closest("[data-edit]"); if(!el) return;
+  el.removeAttribute("data-ph");
+  var text=textOf(el).replace(/\s+$/,"");
+  /* Select-all-and-type inside a chip takes the chip's own delete button with it, because the
+   * button is a child of the editable element. It is put straight back rather than waiting for the
+   * next time edit mode is entered - a row you cannot remove is a row nobody can correct. */
+  if(el.hasAttribute("data-row")&&ROOT.hasAttribute("data-editing")&&!el.querySelector(":scope > .row-del")) armRow(el);
+  /* A LEVEL IS NOT ALWAYS A WHOLE NUMBER, and it was written back as one on blur: a team at 2.1
+   * typed it, watched "2" appear and the bar snap to two thirds, and had no way to say where it
+   * actually stands. One decimal is kept, and the bar, the big number and the target mark follow
+   * the keystroke rather than the focus - what you type is what the meter is showing while you
+   * are still looking at it. Nothing is written back into the field here: rewriting the text a
+   * person is typing into puts the caret at the front of it. */
+  if(el.hasAttribute("data-num")){
+    var live=numOf(el);
+    if(live!==null){ set(el.getAttribute("data-edit"), live); redrawLevels(); }
+    dirty=true; sync(); return;
+  }
+  set(el.getAttribute("data-edit"), text===""?null:text);
+  dirty=true; sync();
+}
+/* THE NUMBER A NUMERIC SLOT IS HOLDING, or null while it is still being typed - "2." and "" are
+ * both a person mid-keystroke, not a value to write. A comma is a decimal point: half the
+ * programme types one. Kept to one decimal, and inside the range the slot declares. */
+function numOf(el){
+  var text=textOf(el).replace(/,/g,".").replace(/[^0-9.]/g,"");
+  var n=parseFloat(text);
+  if(isNaN(n)) return null;
+  var range=(el.getAttribute("data-num")||"").split("-"), lo=Number(range[0]), hi=Number(range[1]);
+  n=Math.min(hi,Math.max(lo,n));
+  return Math.round(n*10)/10;
+}
+/* Leaving the field is where the text is tidied to the number that was stored: 2,15 typed in a
+ * hurry reads back 2.2, and an empty field falls back to what it held rather than to nothing. */
+function onBlur(e){
+  var el=e.target.closest && e.target.closest("[data-edit]"); if(!el) return;
+  if(!el.hasAttribute("data-num")) return;
+  var range=el.getAttribute("data-num").split("-"), lo=Number(range[0]);
+  var n=numOf(el);
+  if(n===null) n=Number(get(el.getAttribute("data-edit")))||lo;
+  el.textContent=String(n);
+  set(el.getAttribute("data-edit"), n);
+  dirty=true; redrawLevels(); sync();
+}
+function onEnum(e){
+  if(!ROOT.hasAttribute("data-editing")) return;
+  var el=e.target.closest && e.target.closest("[data-enum]"); if(!el) return;
+  e.preventDefault();
+  var opts=ENUMS[el.getAttribute("data-enum")]||[], path=el.getAttribute("data-edit");
+  var cur=get(path), at=0, i;
+  for(i=0;i<opts.length;i++) if(opts[i][0]===cur) at=i;
+  /* Shift walks back through them: overshooting "measured" used to cost five more clicks. */
+  var step=e.shiftKey?-1:1, next=opts[(at+step+opts.length)%opts.length];
+  set(path,next[0]);
+  el.className=el.className.replace(/chip--\w+/,"chip--"+next[2]);
+  var label=el.querySelector(".chip-text"); if(label) label.textContent=next[1];
+  el.removeAttribute("data-ph");
+  dirty=true; sync();
+}
+
+/* ── Growing and shrinking a list ───────────────────────────────────────────────────
+ * Adding a row CLONES the last one and empties it, because the page has no renderer to build a new
+ * one with. What follows the clone is the part that matters: every path under the list is rewritten
+ * from its position in the DOM, so the third card always writes to index 2 whatever was added or
+ * deleted before it. Without that, one deletion silently sends every later edit to the wrong row. */
+function rows(listEl){
+  return Array.prototype.filter.call(listEl.children, function(c){ return c.hasAttribute && c.hasAttribute("data-row"); });
+}
+function reindex(listEl){
+  var base=listEl.getAttribute("data-list");
+  rows(listEl).forEach(function(row,i){
+    var from=row.getAttribute("data-row"), to=base+"["+i+"]";
+    if(from===to) return;
+    var nodes=[row].concat(Array.prototype.slice.call(row.querySelectorAll("[data-edit],[data-row],[data-list]")));
+    nodes.forEach(function(n){
+      ["data-edit","data-row","data-list"].forEach(function(a){
+        var v=n.getAttribute(a);
+        if(v && v.indexOf(from)===0) n.setAttribute(a,to+v.slice(from.length));
+      });
+    });
+  });
+}
+/* An enum keeps its value, everything else empties. 'stage', 'status', 'kind' and 'id' are what a
+ * row IS rather than what it says, and a blank one of those renders as nothing at all. */
+var KEEP={stage:1,status:1,kind:1,id:1};
+function blankLike(value){
+  if(value===null||typeof value!=="object") return "";
+  if(Array.isArray(value)) return [];
+  var out={},k;
+  for(k in value) if(Object.prototype.hasOwnProperty.call(value,k)) out[k]=KEEP[k]?value[k]:(typeof value[k]==="boolean"?false:null);
+  return out;
+}
+/* THE ROW THE LIST CAN BE GROWN BACK FROM. The first row of every list is kept aside, pristine,
+ * before a word is typed into it - which is what lets the last row be deleted. Without it "remove"
+ * had to refuse on the last row, and a team with no marketplace reuse and nothing stuck had no way
+ * to say so: an empty list and a list holding one blank row are not the same answer. */
+var TPL=new WeakMap();
+function captureTemplates(){
+  Array.prototype.forEach.call(document.querySelectorAll("[data-list]"),function(listEl){
+    if(TPL.has(listEl)) return;
+    /* KEPT IN THE DOCUMENT, NOT ONLY IN MEMORY. A list emptied to nothing has no row left to clone
+     * from, so the pristine one travels with the file: reload the page, or hand the file to
+     * somebody else, and "+ Add" still knows what a row of this list is made of. A <template> is
+     * inert markup - it does not render, it is not a flex item, and rows() does not see it. */
+    var holder=listEl.querySelector(":scope > template[data-row-template]"), dom=null, shape=null;
+    if(holder&&holder.content.firstElementChild){
+      dom=holder.content.firstElementChild.cloneNode(true);
+      try{ shape=JSON.parse(holder.getAttribute("data-row-shape")); }catch(e){}
+    }else{
+      var first=rows(listEl)[0]; if(!first) return;
+      dom=first.cloneNode(true);
+      Array.prototype.forEach.call(dom.querySelectorAll(".row-del,.row-add"),function(b){ b.parentNode.removeChild(b); });
+      Array.prototype.forEach.call(dom.querySelectorAll("[contenteditable],[title]"),function(e){ e.removeAttribute("contenteditable"); e.removeAttribute("title"); });
+      dom.removeAttribute("contenteditable"); dom.removeAttribute("title");
+      var arr=get(listEl.getAttribute("data-list"));
+      /* The SHAPE of a row, never null: a row whose slots are nested writes to an object, a chip
+       * writes to a string, and handing reach() a null to write "what" into throws. */
+      shape=(Array.isArray(arr)&&arr.length)?blankLike(arr[0]):(dom.hasAttribute("data-edit")?"":{});
+      holder=document.createElement("template");
+      holder.setAttribute("data-row-template","");
+      holder.setAttribute("data-row-shape",JSON.stringify(shape));
+      holder.content.appendChild(dom.cloneNode(true));
+      listEl.appendChild(holder);
+    }
+    TPL.set(listEl,{dom:dom,shape:shape});
+  });
+}
+function addRow(listEl){
+  var existing=rows(listEl), base=listEl.getAttribute("data-list"), tpl=TPL.get(listEl);
+  /* THE PRISTINE ROW, NOT THE LAST ONE. Cloning the last row copied whatever shape it had drifted
+   * into: the second stage card shows a metric with no numbers and no status chip, so "+ Add
+   * stage" handed a team a card that could not hold a before and an after at all. Every list keeps
+   * the row it was built from, and that is what a new one is made of. */
+  var source=(tpl&&tpl.dom)||(existing.length?existing[existing.length-1]:null);
+  if(!source) return;
+  var arr=get(base); if(!Array.isArray(arr)){ arr=[]; set(base,arr); }
+  var copy=source.cloneNode(true);
+  /* A CLONE CARRIES DEAD BUTTONS. cloneNode copies the markup and not the listeners on it, so an
+   * added stage used to arrive with a "+ Add" and a "\u00d7" that did nothing at all - and nothing said so.
+   * They are stripped here and armLists() puts live ones back, on this row and on every list in it. */
+  Array.prototype.forEach.call(copy.querySelectorAll(".row-del,.row-add"),function(b){ b.parentNode.removeChild(b); });
+  editSlots(copy).forEach(function(n){
+    /* AN ENUM IS MARKUP, NOT TEXT. Its icon and its label are elements inside it, and emptying it
+     * left a bare ring with a \u21bb in it and no word at all. Its value is one of the four a row keeps
+     * when it is blanked, so what was cloned is already right - it is left alone. */
+    if(n.hasAttribute("data-enum")) return;
+    var q=PROMPTS[slotKey(n)];
+    n.textContent=q||"";                       // no prompt for this field: data-empty says its piece
+    if(q) n.setAttribute("data-ph",""); else n.removeAttribute("data-ph");
+  });
+  listEl.insertBefore(copy,existing.length?source.nextSibling:listEl.querySelector(":scope > template[data-row-template]"));
+  arr.splice(existing.length,0,blankLike(tpl&&tpl.shape!=null?tpl.shape:(existing.length?arr[existing.length-1]:null)));
+  /* A CHIP A ROW ARRIVES WEARING IS A VALUE IT DOES NOT HAVE. The clone showed "Estimated" while
+   * the data said nothing at all until somebody clicked it, so a new metric could be filed with a
+   * status on the screen and none in the file. What it shows is written down. */
+  editSlots(copy).forEach(function(n){
+    if(!n.hasAttribute("data-enum")) return;
+    var opts=ENUMS[n.getAttribute("data-enum")]||[], lab=n.querySelector(".chip-text"), i;
+    if(!lab) return;
+    for(i=0;i<opts.length;i++) if(opts[i][1]===lab.textContent) set(n.getAttribute("data-edit"),opts[i][0]);
+  });
+  reindex(listEl); armLists(); armEditing(copy);
+  dirty=true; sync();
+  var first=copy.querySelector("[data-edit]")||copy;
+  if(first.focus) first.focus();
+}
+function delRow(row){
+  var listEl=row.parentNode, base=listEl.getAttribute("data-list");
+  var at=rows(listEl).indexOf(row);
+  var arr=get(base); if(Array.isArray(arr)) arr.splice(at,1); else { arr=[]; set(base,arr); }
+  row.parentNode.removeChild(row);
+  reindex(listEl); dirty=true; sync();
+}
+/* Whether a person has written anything into this row. An enum is not writing: every row ships
+ * with one already set, and counting it would put a dialog in front of every deletion. */
+function written(row){
+  return editSlots(row).some(function(el){
+    return !el.hasAttribute("data-enum") && answered(el);
+  });
+}
+function armRow(row){
+  if(row.querySelector(":scope > .row-del")) return;
+  var b=document.createElement("button");
+  b.type="button"; b.className="row-del";
+  /* NOT A CHARACTER IN THE FIELD. A chip is its own slot, so its delete button sits inside the
+   * editable element: a literal "\u00d7" there is text the caret lands in - which is how typed text ended
+   * up inside the button, clipped to nothing - and text that is read back as part of the value.
+   * The glyph is drawn by CSS, and the button is an island the editor will not write into. */
+  b.setAttribute("contenteditable","false");
+  b.setAttribute("aria-label","Remove this one");
+  b.addEventListener("mousedown",function(ev){ ev.preventDefault(); });
+  b.addEventListener("click",function(ev){
+    ev.preventDefault();
+    /* Nothing on this page can be undone, so the only question worth asking is asked here - and
+     * only about a row somebody has written in. An untouched one goes without a word. */
+    if(written(row)&&!ask("Delete this one? What is written in it goes with it.")) return;
+    delRow(row);
+  });
+  row.appendChild(b);
+}
+/* What each list is a list OF, in the words the section around it uses. */
+var ADDS={"team.people":"person","context.aiTools":"tool","architecture.pieces":"piece",
+  "architecture.assets":"asset","stages":"stage","stages.tools":"tool","stages.metrics":"metric",
+  "costs.build":"cost line","costs.run":"cost line","evidence":"source","learnings":"learning",
+  "issues":"blocker","links":"link"};
+function armLists(){
+  captureTemplates();
+  Array.prototype.forEach.call(document.querySelectorAll("[data-list]"),function(listEl){
+    rows(listEl).forEach(armRow);
+    if(listEl.nextElementSibling && listEl.nextElementSibling.classList.contains("row-add")) return;
+    var b=document.createElement("button");
+    b.type="button"; b.className="row-add";
+    var noun=ADDS[String(listEl.getAttribute("data-list")).replace(/\[\d+\]/g,"")];
+    b.textContent=noun?"+ Add "+noun:"+ Add";
+    b.addEventListener("click",function(ev){ ev.preventDefault(); addRow(listEl); });
+    listEl.parentNode.insertBefore(b,listEl.nextSibling);
+  });
+}
+
+/* ── The two modes ──────────────────────────────────────────────────────────────────
+ * plaintext-only where it exists, because a paste out of Word into a contenteditable div arrives
+ * as markup and would put a stylesheet inside a slot. Where it does not, the paste handler below
+ * does the same job. */
+function armEditing(scope){
+  var on=ROOT.hasAttribute("data-editing"), root=scope||document;
+  /* THE SCOPE CAN BE A SLOT ITSELF. querySelectorAll never returns the element it was called on,
+   * and a chip IS its row, so arming a freshly added one from its own subtree armed nothing: the
+   * row appeared, took focus, and swallowed everything typed into it. */
+  var list=Array.prototype.slice.call(root.querySelectorAll("[data-edit]"));
+  if(root.nodeType===1&&root.hasAttribute("data-edit")) list.unshift(root);
+  list.forEach(function(el){
+    if(!on){ el.removeAttribute("contenteditable"); el.removeAttribute("title"); return; }
+    /* WHAT IS BEING ASKED, WHERE IT IS BEING ANSWERED. A dashed box says a slot can be typed in and
+     * nothing more; half of them still hold a shipped example, which reads as an answer rather than
+     * as a prompt. The schema's own question is already on the page - it is what the panel lists -
+     * so it is put on the slot too, and the panel stops being the only place to find it. */
+    var q=askedAt(el.getAttribute("data-edit"));
+    if(q) el.setAttribute("title",q);
+    if(el.hasAttribute("data-enum")){ el.setAttribute("tabindex","0"); return; }
+    el.setAttribute("contenteditable","plaintext-only");
+    if(el.contentEditable!=="plaintext-only") el.setAttribute("contenteditable","true");
+  });
+}
+function setEditing(on){
+  if(on) ROOT.setAttribute("data-editing",""); else ROOT.removeAttribute("data-editing");
+  /* Asked to edit, the page stops being a filed copy and puts its whole bar back. */
+  if(on) ROOT.removeAttribute("data-filed");
+  var b=document.getElementById("tool-edit");
+  b.setAttribute("aria-pressed",on?"true":"false");
+  b.lastElementChild.textContent=on?"Done":"Edit";
+  armEditing();
+  if(on) armLists();
+  /* Leaving edit mode takes the buttons out again, so what is saved is the page as it is read.
+   * They were only hidden by CSS before, which put 16 of them into every submitted file. */
+  else Array.prototype.forEach.call(document.querySelectorAll(".row-del,.row-add"),function(b){ b.parentNode.removeChild(b); });
+}
+
+/* ── The questions ──────────────────────────────────────────────────────────────────
+ * Read off the page rather than listed here: every slot carries the schema's own 'doc', so the
+ * questionnaire a team fills against and the fields the validator checks are the same list by
+ * construction. Grouped by the section each slot sits in, which is also what makes the panel a
+ * progress view - the one thing the manual path had nothing of. */
+function buildQuestions(){
+  var body=document.getElementById("qpanel-body"); if(!body) return;
+  body.innerHTML=""; var groups=[], byName={};
+  /* The heading a slot actually sits under, which is not always its section: two of them put two
+   * headed halves inside one <section>, and grouping by the section alone filed "the next two
+   * months" under "the client". The group is the nearest ancestor that OWNS a heading. */
+  function headOf(el){
+    for(var n=el.parentNode;n&&n.nodeType===1;n=n.parentNode){
+      var t=n.querySelector(":scope > .section-title");
+      if(t) return t;
+      if(n.classList&&n.classList.contains("page")) break;
+    }
+    return null;
+  }
+  slots().forEach(function(el){
+    var path=el.getAttribute("data-edit"), q=askedAt(path); if(!q) return;
+    var t=headOf(el);
+    var h=t&&t.querySelector(".section-name"), head=t&&t.querySelector(".section-no");
+    /* A slot outside every section still belongs somewhere a reader can find: the ones in the
+     * header are about the team, and the one in the footer is the last thing you do before
+     * sending. They shared a group before, so "the honest limit of this submission" was filed
+     * under the team's own name. */
+    var loose=el.closest(".foot")?"Before you send":"About the team";
+    var name=(head?head.textContent+" ":"")+(h?h.textContent:loose);
+    if(!byName[name]){ byName[name]={name:name,items:[],byKey:{}}; groups.push(byName[name]); }
+    /* One entry per QUESTION, not per row and not per field: six people on a team is one question
+     * about a name asked six times, and a panel that lists it six times is one nobody reads to the
+     * bottom. Keyed by the sentence rather than by the path, so two fields that ask the same thing
+     * in the same words print once and the click walks to whichever is still unanswered. */
+    var g=byName[name];
+    if(g.byKey[q]){ g.byKey[q].els.push(el); return; }
+    g.byKey[q]={els:[el],q:q}; g.items.push(g.byKey[q]);
+  });
+  groups.forEach(function(g){
+    var wrap=document.createElement("div"); wrap.className="qgroup";
+    var head=document.createElement("p"); head.className="qgroup-name";
+    var label=document.createElement("span"); label.textContent=g.name;
+    var count=document.createElement("span"); count.className="qgroup-count";
+    head.appendChild(label); head.appendChild(count); wrap.appendChild(head);
+    g.items.forEach(function(item){
+      var b=document.createElement("button");
+      b.type="button"; b.className="qitem"; b.textContent=item.q;
+      b.addEventListener("click",function(){
+        if(!ROOT.hasAttribute("data-editing")) setEditing(true);
+        /* To the first one still unanswered, which is what makes the panel a place to work from
+         * rather than a table of contents. */
+        var go=item.els.filter(function(el){ return !answered(el); })[0]||item.els[0];
+        go.scrollIntoView({block:"center",behavior:"smooth"});
+        if(go.focus) go.focus();
+      });
+      item.button=b; wrap.appendChild(b);
+    });
+    g.count=count; wrap.appendChild(document.createElement("div"));
+    body.appendChild(wrap);
+  });
+  window.__questions=groups;
+}
+function paintQuestions(){
+  var groups=window.__questions; if(!groups) return;
+  groups.forEach(function(g){
+    var done=0;
+    g.items.forEach(function(item){
+      var ok=item.els.every(answered);
+      if(ok){ done++; item.button.setAttribute("data-done",""); } else item.button.removeAttribute("data-done");
+    });
+    g.count.textContent=done+"/"+g.items.length;
+  });
+}
+
+/* ── Saving ─────────────────────────────────────────────────────────────────────────
+ * The file, not the DOM. Edit mode is left first so that the saved document has no contenteditable
+ * attribute and no open panel in it: what is downloaded has to be the same kind of page as the one
+ * that was opened, or the second edit starts from something else. */
+/* THE FILE THIS PAGE WOULD BE, built from a COPY of it. The editor's own furniture - the
+ * contenteditable flags, the row buttons, the hover questions, the open panel - is taken out of the
+ * copy rather than out of the page, which is what lets a save happen without throwing the person
+ * out of edit mode, and what lets the draft be written on every keystroke without anything moving. */
+/* THE SAVED FILE IS THE SUBMISSION, AND A SUBMISSION IS NOT AN EDITOR. What comes out of Save
+ * HTML is a finished document: no bar, no questions drawer, no way back into typing, and no
+ * script at all. The editor lives in the template, which is where a team carries on - this file
+ * is what they hand over, and forty of them are read by people who should not be able to change
+ * a submitted answer by clicking on it.
+ *
+ * The whole editor goes, rather than being hidden: a bar taken out with CSS is a bar the next
+ * reader can still reach, and the filed state it relied on did not survive every way of opening
+ * the file. Nothing can come back that is not in the document. */
+function serialize(forSubmission){
+  var clone=ROOT.cloneNode(true);
+  clone.removeAttribute("data-editing"); clone.removeAttribute("data-questions");
+  clone.removeAttribute("data-js"); clone.removeAttribute("data-filed");
+  Array.prototype.forEach.call(clone.querySelectorAll("[contenteditable]"),function(e){ e.removeAttribute("contenteditable"); });
+  Array.prototype.forEach.call(clone.querySelectorAll("[data-edit][title]"),function(e){ e.removeAttribute("title"); });
+  Array.prototype.forEach.call(clone.querySelectorAll("[tabindex]"),function(e){ e.removeAttribute("tabindex"); });
+  Array.prototype.forEach.call(clone.querySelectorAll(".row-del,.row-add,#tool-draft,#notice"),
+    function(e){ if(e.parentNode) e.parentNode.removeChild(e); });
+  if(forSubmission){
+    /* Every piece of furniture the editor put on the page, and then the editor itself. The data
+     * island stays - it is what lets the submission be checked and re-rendered - and it is read,
+     * never run. */
+    Array.prototype.forEach.call(clone.querySelectorAll("#tools,#qpanel,#nojs,.theme"),
+      function(e){ if(e.parentNode) e.parentNode.removeChild(e); });
+    Array.prototype.forEach.call(clone.querySelectorAll("script"),function(e){
+      if(e.id!=="submission-data" && e.parentNode) e.parentNode.removeChild(e);
+    });
+    /* The room the bar asked for at the bottom of the page goes with the bar. */
+    var body=clone.querySelector("body"); if(body) body.style.paddingBottom="";
+  }else{
+    /* THE DRAFT IS NOT THE SUBMISSION. It is put back into a living page, so it keeps the bar,
+     * the drawer and the script that binds them - strip those here and a reload would restore a
+     * document with nothing to work in. */
+    var qp=clone.querySelector("#qpanel"); if(qp) qp.setAttribute("hidden","");
+    var qb=clone.querySelector("#qpanel-body"); if(qb) qb.innerHTML="";  // rebuilt from the page on open
+    var te=clone.querySelector("#tool-edit");
+    if(te){ te.setAttribute("aria-pressed","false"); if(te.lastElementChild) te.lastElementChild.textContent="Edit"; }
+    var tq=clone.querySelector("#tool-questions"); if(tq) tq.setAttribute("aria-pressed","false");
+  }
+  var json=JSON.stringify(DATA,null,2).replace(/<\/script/gi,"<\\/script");
+  return ("<!doctype html>\n"+clone.outerHTML)
+    .replace(/(<script[^>]+id="submission-data"[^>]*>)[\s\S]*?(<\/script>)/i,function(all,open,close){ return open+json+close; });
+}
+var draftTimer=0;
+function keepDraft(){
+  /* A store that is full, disabled or not there at all is not a reason for the page to stop
+   * working - it is only a reason for the draft not to exist. */
+  try{ localStorage.setItem(DRAFT,JSON.stringify({at:Date.now(),doc:serialize(false)})); }catch(e){}
+}
+function scheduleDraft(){
+  if(draftTimer) clearTimeout(draftTimer);
+  draftTimer=setTimeout(function(){ draftTimer=0; keepDraft(); },600);
+}
+function save(){
+  var doc=serialize(true);
+  /* THE NAME IS THE TEAM'S, AND ONLY IF THERE IS ONE. The template ships with team.code set to the
+   * string "TEAM-CODE" and team.name to "Team name": real values, so a team that saved before
+   * filling the header got team-code-milestone-1.html, and forty of those arrive under one name
+   * (owner, 01.09). A slot still showing what it is for carries data-ph, which is the page's own
+   * answer to "has anybody written here yet", so that is what is asked. */
+  var untouched=function(path){
+    var el=document.querySelector('[data-edit="'+path+'"]');
+    return !el || el.hasAttribute("data-ph");
+  };
+  var team=(!untouched("team.code")&&DATA.team&&DATA.team.code)||
+           (!untouched("team.name")&&DATA.team&&DATA.team.name)||"";
+  var name=String(team).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+  var no=(DATA.team&&DATA.team.milestone)||1;
+  /* EVERY STEP OF THIS IS SOMETHING A HOST CAN REFUSE - the blob, the object URL, the click. None
+   * of them is worth an exception nobody sees: whatever goes wrong, the page says the same thing
+   * it says inside a preview, because it is the same answer - open the file from your machine. */
+  try{
+    var blob=new Blob([doc],{type:"text/html;charset=utf-8"});
+    var url=URL.createObjectURL(blob), a=document.createElement("a");
+    a.href=url; a.download=name?name+"-milestone-"+no+".html":"milestone-"+no+"-submission.html";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function(){ try{ URL.revokeObjectURL(url); }catch(e){} },1000);
+  }catch(e){
+    tellFramed(true,"This browser refused to write the file ("+(e.name||"error")+").");
+    return;
+  }
+  /* The click above is not proof of anything inside a frame - the browser drops the download and
+   * reports nothing - so the page says what it cannot do rather than looking broken. */
+  if(FRAMED){ tellFramed(true); return; }
+  dirty=false;
+}
+function showQuestions(on){
+  var p=document.getElementById("qpanel");
+  p.hidden=!on;
+  if(on) ROOT.setAttribute("data-questions",""); else ROOT.removeAttribute("data-questions");
+  document.getElementById("tool-questions").setAttribute("aria-pressed",on?"true":"false");
+}
+
+var tools=document.getElementById("tools"); tools.hidden=false;
+/* Room for the bar, made by the script that draws it: a page rendered without the editor must not
+ * carry an inch of empty paper at the bottom for a control it does not have. */
+document.body.style.paddingBottom=(tools.offsetHeight+32)+"px";
+document.getElementById("tool-edit").addEventListener("click",function(){ setEditing(!ROOT.hasAttribute("data-editing")); });
+document.getElementById("tool-questions").addEventListener("click",function(){ showQuestions(document.getElementById("qpanel").hidden); });
+document.getElementById("qpanel-close").addEventListener("click",function(){ showQuestions(false); });
+document.getElementById("tool-save").addEventListener("click",save);
+
+/* ── The page inside somebody else's page ───────────────────────────────────────────
+ * SharePoint and Teams show an HTML file in a sandboxed frame. Scripts run there, which is why
+ * the editor looks perfectly alive, but a download started from inside one is dropped by the
+ * browser without an error to catch - so this is worked out from the frame rather than from a
+ * failure. Storage goes the same way, and a team typing into a preview would otherwise lose the
+ * lot on a reload. */
+var FRAMED=false; try{ FRAMED=window.self!==window.top; }catch(e){ FRAMED=true; }
+var KEPT=true; try{ localStorage.setItem("__probe","1"); localStorage.removeItem("__probe"); }catch(e){ KEPT=false; }
+var notice=null;
+
+/* A QUESTION THE HOST IS ALLOWED TO REFUSE. Inside a Teams or SharePoint preview the frame is
+ * sandboxed without allow-modals, and window.confirm does not return false there - it throws, and
+ * the click that asked it dies half-done. A button that quietly does nothing is the same bug as
+ * the one Save HTML had, so where the question cannot be put the click itself is the answer: the
+ * person pressed a delete they had to aim at, and the confirm was a courtesy this host refuses to
+ * show. */
+function ask(question){
+  try{ return window.confirm(question); }
+  catch(e){ return true; }
+}
+
+function copyFile(btn){
+  /* execCommand rather than the clipboard API: the API needs a permission a framed page is not
+   * granted, and this is the one route out of a preview that does not need a download. */
+  var ta=document.createElement("textarea");
+  ta.value=serialize(true); ta.setAttribute("readonly","");
+  ta.style.position="fixed"; ta.style.top="-1000px"; ta.style.opacity="0";
+  document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0,ta.value.length);
+  var ok=false; try{ ok=document.execCommand("copy"); }catch(e){}
+  document.body.removeChild(ta);
+  btn.textContent = ok ? "Copied - paste into a text editor and save as .html"
+                       : "This preview blocks copying too - download the file instead";
+  btn.disabled=ok;
+}
+
+/* Shown for the frame, and shown for anything else that refuses to write a file - the reader is
+ * told what happened, not what the page guessed about why. */
+function tellFramed(flash,reason){
+  if(!FRAMED && !reason) return;
+  if(!notice){
+    notice=document.createElement("div");
+    notice.className="notice"; notice.id="notice";
+    var text=document.createElement("div"); text.className="notice-text";
+    var head=document.createElement("p");
+    var b=document.createElement("b");
+    b.textContent=reason||"This page cannot write the file from here.";
+    head.appendChild(b);
+    head.appendChild(document.createTextNode(FRAMED
+      ? " This copy is open inside a SharePoint or Teams preview, and a browser refuses downloads from one."
+        +(KEPT?"":" Nothing you type here is being kept either.")
+      : " Nothing has been lost - the page still holds everything you have typed."));
+    var how=document.createElement("p");
+    how.style.marginTop="var(--space-2)";
+    how.textContent="Download the file itself - in SharePoint, the Download on the file, not this page - open it from your machine, and everything works.";
+    text.appendChild(head); text.appendChild(how);
+    var row=document.createElement("div"); row.className="notice-do";
+    var copy=document.createElement("button");
+    copy.type="button"; copy.className="notice-b"; copy.textContent="Copy the file to the clipboard instead";
+    copy.addEventListener("click",function(){ copyFile(copy); });
+    row.appendChild(copy); text.appendChild(row);
+    var x=document.createElement("button");
+    x.type="button"; x.className="notice-x"; x.setAttribute("aria-label","Dismiss");
+    x.textContent="\u00d7";
+    x.addEventListener("click",function(){ notice.remove(); });
+    notice.appendChild(text); notice.appendChild(x);
+    document.body.appendChild(notice);
+  }
+  if(!notice.isConnected) document.body.appendChild(notice);
+  if(flash){
+    notice.removeAttribute("data-flash");
+    void notice.offsetWidth;
+    notice.setAttribute("data-flash","");
+  }
+}
+/* Said on arrival, not at the moment of loss: a team that reads it before typing still has the
+ * choice of opening the file properly. */
+if(FRAMED) tellFramed(false);
+/* SAY SO WHEN THE PAGE IS NOT THE FILE. A restored draft is the right default - it is the work -
+ * but a page that quietly differs from the file it was opened from is a page nobody can trust, so
+ * it is named, dated, and there is one click back to the file as it stands on disk. */
+if(restoredAt){
+  var mark=document.createElement("button");
+  mark.type="button"; mark.className="tool tool--draft"; mark.id="tool-draft";
+  mark.title="Restored from the draft this browser saved at "+new Date(restoredAt).toLocaleString()+
+             ". Click to discard it and reload the file as it was saved.";
+  var markText=document.createElement("span"); markText.textContent="Draft restored";
+  mark.appendChild(markText);
+  mark.addEventListener("click",function(){
+    if(!ask("Discard the draft saved in this browser and reload the file as it was last saved to disk?")) return;
+    try{ localStorage.removeItem(DRAFT); }catch(e){}
+    if(draftTimer) clearTimeout(draftTimer);
+    dirty=false; location.reload();
+  });
+  /* Left of the two buttons, beside the count: it says what this page IS, and the things you can
+   * do to it are kept together on the right. */
+  tools.insertBefore(mark,document.getElementById("tool-questions"));
+}
+document.addEventListener("focusin",onFocus);
+document.addEventListener("input",onInput);
+document.addEventListener("focusout",onBlur);
+document.addEventListener("click",onEnum);
+document.addEventListener("keydown",function(e){
+  if(e.key==="Enter"&&e.target.closest&&e.target.closest("[data-enum]")) onEnum(e);
+  if((e.metaKey||e.ctrlKey)&&e.key==="s"){ e.preventDefault(); save(); }
+});
+/* Word and Confluence both paste markup. A slot is one field of a document, never a document. */
+document.addEventListener("paste",function(e){
+  var el=e.target.closest&&e.target.closest("[data-edit]"); if(!el) return;
+  if(el.contentEditable==="plaintext-only") return;
+  e.preventDefault();
+  document.execCommand("insertText",false,(e.clipboardData||window.clipboardData).getData("text"));
+});
+window.addEventListener("beforeunload",function(e){ if(dirty){ e.preventDefault(); e.returnValue=""; } });
+
+captureTemplates(); capturePrompts(); buildQuestions(); redrawLevels(); sync();
+})();
+</script>
+</body>
+</html>
